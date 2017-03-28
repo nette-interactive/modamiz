@@ -1,0 +1,33 @@
+When you purchase any of our plugins but you already have the Trial version istalled you need to replace the actual plugin .dll file with the new one.
+
+NOTE: If you haven't made any modifications to the plugin css or cshtml files then we recommend you to update the whole plugin folder and not just the plugin .dll file. It is possible that we might have added new files since you have downloaded the trial version. So in this case you will be missing these files and the plugin may not work as expected.
+
+WARNING: Do NOT uninstall the plugin as this will delete the data of the plugin from the database and you will have to set it up again.
+If you have any problems removing the trial version please submit a ticket, so that we can advice.
+
+Example 1:
+For example if you have a Trial version installed for the Nop Anywhere Sliders plugin.
+
+
+Steps:
+1. Download the package with the Paid version from your order downloadable product from Nop-Templates.com
+2. Find the NopAnywhereSliders_3.X.zip file where X is the version of the plugin.
+3. Extract the code and open Plugins\SevenSpikes.Nop.Plugins.AnywhereSliders folder.
+4. Copy SevenSpikes.Nop.Plugins.AnywhereSliders.dll file
+5. Then on your web site open Plugins\SevenSpikes.Nop.Plugins.AnywhereSliders folder and replace the existing file with the one you copied on step 4.
+6. Replace the SevenSpikes.Core plugin folder with the one from the paid package.
+7. Now the Trial version is replaced with the paid version.
+8. Now you need to restart your application - Administration -> Restart Application
+
+Example 2:
+For example if you have a Trial version installed for the Nop Quick Tabs plugin.
+
+Steps:
+1. Download the package with the Paid version from your order downloadable product from Nop-Templates.com
+2. Find the NopQuickTabs_3.X.zip file where X is the version of the plugin.
+3. Extract the code and open Plugins\SevenSpikes.Nop.Plugins.NopQuickTabs folder.
+4. Copy SevenSpikes.Nop.Plugins.NopQuickTabs.dll file
+5. Then on your web site open Plugins\SevenSpikes.Nop.Plugins.NopQuickTabs folder and replace the existing file with the one you copied on step 4.
+6. Replace the SevenSpikes.Core plugin folder with the one from the paid package.
+7. Now the Trial version is replaced with the paid version.
+8. Now you need to restart your application - Administration -> Restart Application

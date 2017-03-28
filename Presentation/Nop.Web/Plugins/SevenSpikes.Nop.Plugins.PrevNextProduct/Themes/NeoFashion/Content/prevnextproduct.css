@@ -1,0 +1,88 @@
+﻿/*
+* Copyright 2014 Seven Spikes Ltd. All rights reserved. (http://www.nop-templates.com)
+* http://www.nop-templates.com/t/licensinginfo
+*/
+
+
+@media all and (min-width: 240px) {
+
+.overview .product-name{
+    overflow: hidden;
+}
+
+.previous-product,
+.next-product {
+	overflow: hidden;
+    width: 49%;
+    display: inline-block;
+    margin: 15px 0;
+}
+.previous-product a,
+.next-product a{
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #fff inset;
+    padding: 8px;
+    color: #333;
+    text-shadow: 1px 1px #eee;
+    cursor: pointer;
+    text-align: center;
+}
+    .previous-product a:hover,
+    .next-product a:hover {
+        background-position: center, bottom;
+    }
+
+.previous-product a{
+	background: url(img/prev.png) no-repeat left 10px center, #ccc url(img/button2.png) repeat-x top;
+    padding-left: 30px;
+}
+    .previous-product a:hover{
+	    background: url(img/prev.png) no-repeat left 10px center, #ccc url(img/button2.png) repeat-x bottom;
+        padding-left: 30px;
+    }
+.next-product a {
+	background: url(img/next.png) no-repeat right 10px center, #ccc url(img/button2.png) repeat-x top;
+    padding-right: 30px;
+}
+    .next-product a:hover {
+	    background: url(img/next.png) no-repeat right 10px center, #ccc url(img/button2.png) repeat-x bottom;
+        padding-right: 30px;
+    }
+
+.previous-product a .previous-product-label, 
+.next-product a .next-product-label {
+    display: none;
+}
+
+}
+
+@media all and (min-width: 240px) and (max-width: 980px) {
+
+    .previous-product a > span,
+    .next-product a > span{
+        display: none;
+    }
+
+    .previous-product a,
+    .next-product a{
+        width: 45px;
+        height: 45px;
+        padding: 0;
+        background-position: center;
+    }
+    .previous-product a:hover,
+    .next-product a:hover{
+        padding: 0;
+        background-position: center
+    }
+
+    .previous-product a {
+        float: right;
+    }
+    .next-product a {
+        float: left;
+    }
+
+}

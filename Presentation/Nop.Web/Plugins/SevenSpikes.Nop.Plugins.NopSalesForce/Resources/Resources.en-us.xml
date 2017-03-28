@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes.Plugins.SalesForce.Admin.Menu.MenuName">
+    <Value>Sales Force</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.Submenus.Settings">
+    <Value>Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.NopSalesForce">
+    <Value>Nop Sales Force</Value>
+  </LocaleResource> 
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings">
+    <Value>Sales Force Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.EnableNopSalesForce">
+    <Value>Enable Nop Sales Force</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.EnableNopSalesForce.Hint">
+    <Value>Enables Nop Sales Force.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.MachineName">
+    <Value>Machine Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.MachineName.Hint">
+    <Value>Machine Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfCustomersToProcessInOneRun">
+    <Value>Number of Customers To Process In One Run</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfCustomersToProcessInOneRun.Hint">
+    <Value>The number of customers to process in one run. The NopSalesForce plugin runs a scheduled task to process products, customers and orders. The number of customers to process should be limited as there is a limit to the Sales Force soap service calls, which varies with the Sales Force organization licenses and Sales Force edition.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfLicensesToProcessInOneRun">
+    <Value>Number of Licenses To Process In One Run</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfLicensesToProcessInOneRun.Hint">
+    <Value>The number of licenses to process in one run. The NopSalesForce plugin runs a scheduled task to process products, customers, orders, shopping carts and licenses. The number of licenses to process should be limited as there is a limit to the Sales Force soap service calls, which varies with the Sales Force organization licenses and Sales Force edition.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfOrdersToProcessInOneRun">
+    <Value>Number of Orders To Process In One Run</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfOrdersToProcessInOneRun.Hint">
+    <Value>The number of orders to process in one run. The NopSalesForce plugin runs a scheduled task to process products, customers and orders. The number of orders to process should be limited as there is a limit to the Sales Force soap service calls, which varies with the Sales Force organization licenses and Sales Force edition.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfProductsToProcessInOneRun">
+    <Value>Number of Products To Process In One Run</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.NumberOfProductsToProcessInOneRun.Hint">
+    <Value>The number of products to process in one run. The NopSalesForce plugin runs a scheduled task to process products, customers and orders. The number of products to process should be limited as there is a limit to the Sales Force soap service calls, which varies with the Sales Force organization licenses and Sales Force edition.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.Password">
+    <Value>Password</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.Password.Hint">
+    <Value>The password for Sales Force.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.ProcessCustomersWithRegistrationOlderThanSpecifiedHour">
+    <Value>Process customers with registration older than</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.ProcessCustomersWithRegistrationOlderThanSpecifiedHour.Hint">
+    <Value>Specifies how old a customer registration should be so that the customer is processed by the Sales Force task. It is a good idea that customers are not processed immediately after their registration as it might take some time for the customer to activate their registration or place orders.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.ProcessOrdersOlderThanSpecifiedHour">
+    <Value>Process orders older than</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.ProcessOrdersOlderThanSpecifiedHour.Hint">
+    <Value>Specifies how old an order should be to be processed by the Sales Force task. It is a good idea that orders are not processed immediately as it might take some time for the order payment to go through after an order is placed.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.SalesForceSoapServiceEndPoint">
+    <Value>Sales Force Soap Service End Point</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.SalesForceSoapServiceEndPoint.Hint">
+    <Value>The url for the Sales Force Soap Service.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.SalesForceTaskRunPeriod">
+    <Value>Sales Force Task Run Period</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.SalesForceTaskRunPeriod.Hint">
+    <Value>Specifies the run period of the Sales Force task in hours.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.SecurityToken">
+    <Value>Security Token</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.SecurityToken.Hint">
+    <Value>The security token used to append to the user name in order to access the Sales Force API. The security token can be generated by logging into Sales Force and going to Setup -&gt; Personal Setup -&gt; My Personal Information -&gt; Reset My Security Token.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.UserName">
+    <Value>User Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.NopSalesForce.Admin.SalesForceSettings.UserName.Hint">
+    <Value>The user name for Sales Force. This is usually the email with which the user logs in Sales Force.</Value>
+  </LocaleResource>
+</Language>

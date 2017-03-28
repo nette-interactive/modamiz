@@ -1,0 +1,8 @@
+﻿Group: Shipping rate computation
+FriendlyName: DHL Kargo
+SystemName: Shipping.DHL
+Version: 1.50
+SupportedVersions: 3.90
+Author: Nette Internet Teknolojileri
+DisplayOrder: 1
+FileName: Nop.Plugin.Shipping.DHL.dll

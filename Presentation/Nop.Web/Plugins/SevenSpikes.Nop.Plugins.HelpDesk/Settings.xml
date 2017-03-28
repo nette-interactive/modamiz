@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <Setting Name="HelpDeskSettings.EnableHelpDesk">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.EnableCaptcha">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.ResponseDeadline">
+    <Value>8</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.ShowStaffSignature">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.ShowDeadlineWorkingHoursAndWorkingDayOnNewTicketsPage">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.DefaultSelectedStatus">
+    <Value>0</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.CloseAutomaticallyAfterXDays">
+    <Value>7</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.WidgetZone">
+    <Value>account_navigation_after</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.DefaultEmailAccountId">
+    <Value>1</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.IsProductFieldRequired">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.MaxTicketProducts">
+    <Value>5</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.SendEmailOnSubmitTicket">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.SendEmailToStoreOwnerOnSubmitTicket">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.SendEmailToTicketAssignee">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.SendEmailOnReply">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.SendEmailOnClosingTicketAutomatically">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.HelpDeskScheduledTaskIntervalSeconds">
+    <Value>3600</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.WorkingWeekDays">
+    <Value>1,2,3,4,5</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.WorkingStartHour">
+    <Value>09</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.WorkingEndHour">
+    <Value>17</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.PreviewAttachmentsInBrowser">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.ProductPageWidgetZone">
+    <Value>0</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.OrderPageWidgetZone">
+    <Value>0</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.MinimumProductSearchKeywordLength">
+    <Value>3</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.MaximumSizeOfFileToAttach">
+    <Value>2</Value>
+  </Setting>
+  <Setting Name="HelpDeskSettings.MaximumSizeOfTheAttachedFiles">
+    <Value>4</Value>
+  </Setting>
+</Settings>

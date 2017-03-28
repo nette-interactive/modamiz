@@ -1,0 +1,158 @@
+﻿.filter-block a.clearFilterOptions,
+.filter-block a.clearPriceRangeFilter {
+    float: left;
+    right: auto;
+    left: 1px;
+}
+.filter-block a.toggleControl {
+    float: right;
+    padding-right: 22px;
+    padding-left: 5px;
+    background: url('images/responsive-pointer1-down.png') right top no-repeat;
+}
+.filter-block a.toggleControl.closed {
+    background: url('images/responsive-pointer1-left.png') right center no-repeat;
+}
+
+.filtersGroupPanel li label {
+    padding: 8px 28px 8px 8px;
+}
+.filtersGroupPanel.imageOptions li label {
+    padding-right: 40px;
+    padding-left: 8px;
+}
+.filtersGroupPanel li label:before {
+	right: 10px;
+	left: auto;
+}
+
+.filtersGroupPanel li .color,
+.filtersGroupPanel li .defaultColor {
+    right: 10px;
+    left: inherit;
+}
+
+.selected-options-list > li {
+	text-align: right;
+}
+.selected-options-list > li label {
+	display: block;
+}
+.selected-options-list > li span {
+	padding: 5px 2px 5px 15px;
+    float: right;
+    background-position: top 5px left;
+    margin: 0 0 0 7px;
+}
+
+.select-inner {
+    text-align: right;
+    background-position: left 5px center;
+}
+
+/*Price range*/
+.priceRangeMinPanel {
+    float: right;
+}
+.priceRangeMaxPanel {
+    float: left;
+}
+.priceRangeCurrentPricesPanel .currentMinPrice {
+    float: right;
+}
+.priceRangeCurrentPricesPanel .currentMaxPrice {
+    float: left;
+}
+
+.ajaxFilters .k-window-actions {
+    left: 10px;
+    right: auto;
+}
+
+
+/*=====================================================
+    
+    TABLETS LANDSCAPE & NETBOOKS
+
+=====================================================*/
+
+@media all and (max-width: 980px) and (min-width: 769px) {
+
+    .filter-block a.toggleControl {
+        display: block;
+        width: 100%;
+        background-position: right center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	    box-sizing: border-box;
+    }
+    .filtersGroupPanel li a {
+        padding: 10px 30px 10px 5px;
+    }
+    .selected-options-list > li span {
+        padding: 7px 2px 7px 15px;
+        background-position: top 7px left;
+    }
+
+}
+
+
+/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (max-width: 768px) and (min-width: 481px) {
+
+    .filter-block a.toggleControl {
+        display: block;
+        width: 100%;
+        background-position: right center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	    box-sizing: border-box;
+    }
+    .filtersGroupPanel li a {
+        padding: 10px 30px 10px 5px;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        width: auto;
+    }
+    .selected-options-list > li span {
+        padding: 7px 2px 7px 15px;
+        background-position: top 7px left;
+    }
+}
+
+
+/*=====================================================
+    
+    SMALLER MOBILE DEVICES
+
+=====================================================*/
+
+@media all and (max-width: 480px) {
+
+    .filter-block a.toggleControl {
+        display: block;
+        width: 100%;
+        background-position: right center;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	    box-sizing: border-box;
+    }
+    .filtersGroupPanel li a {
+        padding: 10px 30px 10px 5px;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        width: 30%;
+    }
+    .selected-options-list > li span {
+        padding: 7px 2px 7px 15px;
+        background-position: top 7px left;
+    }
+
+}

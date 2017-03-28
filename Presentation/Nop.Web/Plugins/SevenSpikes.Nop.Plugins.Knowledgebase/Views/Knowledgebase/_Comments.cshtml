@@ -1,0 +1,67 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models.Public
+
+@model ArticleModel
+
+<div class="comments-section">
+    <h3 class="cs-title">
+        <span class="title-text">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comments")</span>
+    </h3>
+
+    @if (Model.ArticleComments.Count > 0)
+    {
+        <ul class="article-comments">
+            @foreach (var comment in @Model.ArticleComments)
+            {
+                <li id="comment-@comment.Id" class="article-comment">
+                    <div class="comment-header">
+                        <span class="comment-author">
+                            <label class="info-label">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Author")</label>
+                            <span class="info-value">@comment.Author</span>
+                        </span>
+                        <span class="comment-creation-date">
+                            <label class="info-label">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.CreatedOn")</label>
+                            <span class="info-value">@comment.Date</span>
+                        </span>
+                    </div>
+                    <div class="comment-content">@Html.Raw(@comment.Text)</div>
+
+                    @if (comment.CouldChange)
+                    {
+                        <div class="article-action-buttons">
+                            @if (comment.CouldEdit)
+                            {
+                                <button class="edit-article-button" onclick="enterEditMode(@comment.Id, '@comment.ArticleSEName' )" title="@T(" SevenSpikes.Knowledgebase.public.entities.article.comment.edit")">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Edit")</button>
+                            }
+                            <a class="delete-article-button" href="@Url.Action("Delete", "ArticleComment" )/@comment.Id?articleSEName=@comment.ArticleSEName" title="@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Delete")">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Delete")</a>
+                        </div>
+                    }
+                </li>
+            }
+        </ul>
+        <script>
+            function enterEditMode(commentId, articleSEName) {
+                var url = "@Url.Action("Edit", "ArticleComment", new { area = "admin" })/" + commentId + "?articleSEName=" + articleSEName;
+
+                $.get(url, function (data) {
+                    $("#comment-" + commentId).html(data);
+                });
+
+                return false;
+            }
+        </script>
+    }
+    else
+    {
+        <p class="no-comments">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.NoComments")</p>
+    }
+
+    @if (Model.CouldWriteComment)
+    {
+        @Html.Partial(ViewNames.Article_WriteCommentForm, Model.CommentModel)
+    }
+    else
+    {
+        <p class="warning">@T("SevenSpikes.Knowledgebase.Public.Entities.Comments.CouldnotWriteComments")</p>
+    }
+</div>

@@ -1,0 +1,37 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+
+@model LinksModel
+
+@{
+    Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.css");
+
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    if (supportRtl)
+    {
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.rtl.css");
+    }
+}
+
+<li id="newTicket">
+    @Html.ActionLink(T("SevenSpikes.HelpDesk.Public.NewTicketLink").Text, "NewTicket", "HelpDesk")
+</li>
+
+<li id="myTickets">
+    @Html.ActionLink(T("SevenSpikes.HelpDesk.Public.MyTicketsLink").Text, "MyTickets", "HelpDesk")
+</li>
+
+@if (Model.HasPermissions)
+{
+    object routeData = null;
+
+    if (Model.SelectedStatus > 0)
+    {
+        routeData = new { status = Model.SelectedStatus };
+    }
+    
+    <li id="manageTickets">
+        @Html.ActionLink(T("SevenSpikes.HelpDesk.Public.ManageTicketsLink").Text, "ManageTickets", "HelpDesk", routeData, null)
+    </li>
+}

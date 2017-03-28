@@ -1,0 +1,25 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models.Public
+
+@model IList<ArticleModel>
+
+<div class="related-articles">
+    <h3 class="ra-title">
+        <span class="title-text">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.RelatedArticles")</span>
+    </h3>
+    @if (Model.Count > 0)
+    {
+        <ul class="ra-list">
+            @foreach (var article in @Model)
+            {
+                <li class="ra-item">
+                    <a class="title-link" href="@Url.RouteUrl("HomePage")@article.SEName" title="@article.Title">@article.Title</a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="no-related-articles">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.NoRelatedArticles")</p>
+    }
+</div>

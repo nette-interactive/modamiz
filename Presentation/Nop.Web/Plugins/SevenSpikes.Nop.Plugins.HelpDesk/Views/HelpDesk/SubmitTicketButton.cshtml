@@ -1,0 +1,19 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+
+@model SubmitTicketButtonModel
+
+@{
+    Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.css");
+
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    if (supportRtl)
+    {
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.rtl.css");
+    }
+}
+
+<div class="submit-ticket">
+    <input type="button" value="@T("SevenSpikes.HelpDesk.Public.NewTicketLink.SubmitATicket")" class="button-2 submit-ticket-button" onclick="setLocation('@(Url.Action("NewTicket", "HelpDesk", new { productids = Model.ProductId }))')">
+</div>

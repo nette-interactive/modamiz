@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'TransatBold';
+    src: url('transatbold.eot');
+    src: url('transatbold.eot?#iefix') format('embedded-opentype'),
+         url('transatbold.woff2') format('woff2'),
+         url('transatbold.woff') format('woff'),
+         url('transatbold.ttf') format('truetype'),
+         url('transatbold.svg#TransatBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TransatBlack';
+    src: url('transatblack.eot');
+    src: url('transatblack.eot?#iefix') format('embedded-opentype'),
+         url('transatblack.woff2') format('woff2'),
+         url('transatblack.woff') format('woff'),
+         url('transatblack.ttf') format('truetype'),
+         url('transatblack.svg#TransatBlack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TransatLight';
+    src: url('transatlight.eot');
+    src: url('transatlight.eot?#iefix') format('embedded-opentype'),
+         url('transatlight.woff2') format('woff2'),
+         url('transatlight.woff') format('woff'),
+         url('transatlight.ttf') format('truetype'),
+         url('transatlight.svg#TransatLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TransatMedium';
+    src: url('transatmedium.eot');
+    src: url('transatmedium.eot?#iefix') format('embedded-opentype'),
+         url('transatmedium.woff2') format('woff2'),
+         url('transatmedium.woff') format('woff'),
+         url('transatmedium.ttf') format('truetype'),
+         url('transatmedium.svg#TransatMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Transat';
+    src: url('transatstandard.eot');
+    src: url('transatstandard.eot?#iefix') format('embedded-opentype'),
+         url('transatstandard.woff2') format('woff2'),
+         url('transatstandard.woff') format('woff'),
+         url('transatstandard.ttf') format('truetype'),
+         url('transatstandard.svg#Transat') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TransatItalic';
+    src: url('transatstandardoblique.eot');
+    src: url('transatstandardoblique.eot?#iefix') format('embedded-opentype'),
+         url('transatstandardoblique.woff2') format('woff2'),
+         url('transatstandardoblique.woff') format('woff'),
+         url('transatstandardoblique.svg#TransatItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

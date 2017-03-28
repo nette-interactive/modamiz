@@ -1,0 +1,37 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models.Public
+
+@model CategoryModel
+
+@{
+    Layout = "_Knowledgebase.Layout.cshtml";
+    
+    Html.AddTitleParts(!String.IsNullOrEmpty(Model.SEOTitle) ? Model.SEOTitle : Model.Name);
+    Html.AddMetaDescriptionParts(Model.SEODescription);
+    Html.AddMetaKeywordParts(Model.SEOKeywords);    
+}
+
+@Html.Action("Navigation", "Knowledgebase")
+
+<div class="category-info-wrap">
+    <div class="category-info">
+        <h1 class="category-title">
+            <span class="title-text">@Model.Name</span>
+        </h1>
+        @if (@Model.IsAdmin)
+        {
+            <div class="admin-options">
+                <a class="k-button edit-category" href="@Url.Action("Edit", "KbCategoryAdmin", new { area ="admin", id = Model.Id, isPopup = false})" title="@T("SevenSpikes.Knowledgebase.Public.Entities.Category.Edit")">@T("SevenSpikes.Knowledgebase.Public.Entities.Category.Edit")</a>
+                <ul class="creation-info">
+                    <li class="creation-item">
+                        <label class="ci-label">@T("SevenSpikes.Knowledgebase.Public.Entities.Category.CreatedOn")</label>
+                        <span class="ci-value">@Model.Date</span>
+                    </li>
+                </ul>
+            </div>
+        }
+
+        @Html.Partial("_CategoryArticles", @Model.Articles)
+        @Html.Partial(ViewNames.KnowledgebasePublic_ChildCategories, @Model.ChildCategories)
+    </div>
+</div>

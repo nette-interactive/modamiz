@@ -1,0 +1,9 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+
+@{
+    Layout = "_Knowledgebase.Layout.cshtml";   
+}
+
+@Html.Action("Navigation", "Knowledgebase")
+
+<div class="no-access-message">@T("SevenSpikes.Knowledgebase.Public.Entities.NoAccess")</div>

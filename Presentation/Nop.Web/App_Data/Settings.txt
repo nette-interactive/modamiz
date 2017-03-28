@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=.\SQLEXPRESS;Initial Catalog=Modamiz_3.9;Integrated Security=False;Persist Security Info=False;User ID=radwan;Password=123123

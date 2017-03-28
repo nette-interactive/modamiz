@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <Setting Name="KnowledgebaseSettings.Enable">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.EnableCategoryPage">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.EnableComments">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.ShowCaptchaForComments">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.CommentsRequireApproval">
+    <Value>true</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.AllowUsersToEditTheirComments">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.NumberOfResultsInDropdown">
+    <Value>5</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.ResultsPageNumberOfItemsPerPage">
+    <Value>10</Value>
+  </Setting>
+  <Setting Name="KnowledgebaseSettings.HighlightedTextChunkLength">
+    <Value>200</Value>
+  </Setting>
+</Settings>

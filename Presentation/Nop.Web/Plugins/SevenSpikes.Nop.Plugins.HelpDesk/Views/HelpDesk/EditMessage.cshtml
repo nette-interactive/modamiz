@@ -1,0 +1,92 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+
+@model EditMessagePublicModel
+
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts(T("SevenSpikes.HelpDesk.Public.EditTicket.Edit").Text + "#" + Model.MessageId);
+
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.rtl.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.default.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.common.min.css");
+    Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.css");
+
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    if (supportRtl)
+    {
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.rtl.css");
+    }
+
+    Html.AddScriptParts(ResourceLocation.Foot, "~/Administration/Scripts/kendo/2014.1.318/kendo.web.min.js");
+}
+
+@section left
+{
+    @Html.Partial("CustomerNavigation", Model.NavigationModel)
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        @Html.Partial("_JSNavigation", "manageTickets")
+
+        var defaultTools = kendo.ui.Editor.defaultTools;
+
+        defaultTools["insertLineBreak"].options.shift = false;
+        defaultTools["insertParagraph"].options.shift = true;
+
+        $("#@Html.FieldIdFor(model => model.Content)").kendoEditor({
+            encoded: false
+        });
+
+        $("#@Html.FieldIdFor(model => model.Content)").data("kendoEditor")
+           .toolbar
+           .element
+           .find("select.k-formatting").data("kendoSelectBox")
+              .one("open", function (e) {
+                  setTimeout(function () {
+                      e.sender.popup.wrapper.addClass("dropdown-wrapper paragraph-select");
+                  });
+              });
+    });
+
+    // http://stackoverflow.com/questions/8466643/jquery-validate-enable-validation-for-hidden-fields/8565769#8565769
+    // enable the validation of the hidden fields( kendo fields )
+    $.validator.setDefaults({
+        ignore: [],
+    });
+</script>
+
+<div class="page account-page ticketing-page edit-message-page">
+    <div class="page-title">
+        <h1 class="pt-text">@T("Account.MyAccount") - @T("SevenSpikes.HelpDesk.Public.EditMessageLink")</h1>
+    </div>
+
+    <div class="page-body" id="addNewTicket">
+        @using (Html.BeginForm("EditMessage", "HelpDesk", FormMethod.Post, new { id = "editMessageForm" }))
+        {
+            @Html.Hidden("messageId", Model.MessageId)
+
+            <div class="fieldset">
+                <div class="form-fields">
+                    <div class="inputs">
+                        @Html.LabelFor(model => model.Content, new { }, ":")
+                        @Html.TextAreaFor(model => model.Content, new { style = "height: 350px;" })
+                        @Html.RequiredHint()
+                        @Html.ValidationMessageFor(model => model.Content)
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="k-button save-message-button">@T("SevenSpikes.HelpDesk.Public.EditTicket.Save")</button>
+                <a href="@Html.Raw(Url.Action("ViewTicket", "HelpDesk", new { id = Model.TicketId }))" class="k-button return-to-ticket-button">
+                    @T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ReturnToTheTicket")
+                </a>
+            </div>
+        }
+    </div>
+</div>

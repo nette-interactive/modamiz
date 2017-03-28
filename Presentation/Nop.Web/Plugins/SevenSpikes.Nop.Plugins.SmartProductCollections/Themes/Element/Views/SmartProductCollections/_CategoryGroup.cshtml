@@ -1,0 +1,41 @@
+﻿@using Nop.Core
+@using Nop.Core.Infrastructure
+@using Nop.Services.Configuration
+@using SevenSpikes.Nop.Plugins.SmartProductCollections.Models.Public
+
+@model CategoryGroupModel
+
+@{
+    Layout = "";
+
+    ISettingService settingService = EngineContext.Current.ContainerManager.Resolve<ISettingService>();
+    IStoreContext storeContext = EngineContext.Current.ContainerManager.Resolve<IStoreContext>();
+
+    int storeId = storeContext.CurrentStore.Id;
+
+    string layoutDesign = settingService.GetSettingByKey("elementthemesettings.layout", "earth-theme", storeId, true);
+    string layoutVariant = settingService.GetSettingByKey("elementthemesettings.variant", "variant-1", storeId, true);
+}
+
+@if (layoutDesign == "earth-theme")
+{
+    if (layoutVariant == "variant-1")
+    {
+        @Html.Partial("CategoryGroupVariants/_EarthVariant1", Model)
+    }
+    else
+    {
+        @Html.Partial("CategoryGroupVariants/_EarthVariant2", Model)
+    }
+}
+else if (layoutDesign == "air-theme")
+{
+    if (layoutVariant == "variant-1")
+    {
+        @Html.Partial("CategoryGroupVariants/_AirVariant1", Model)
+    }
+    else
+    {
+        @Html.Partial("CategoryGroupVariants/_AirVariant2", Model)
+    }
+}

@@ -1,0 +1,7 @@
+﻿@model MiniShoppingCartModel
+@using Nop.Web.Models.ShoppingCart;
+
+<div class="top-basket">
+    <a href="@Url.RouteUrl("ShoppingCart")"><i>@(Model.TotalProducts > 0 ? Model.TotalProducts.ToString() : "0")</i></a>
+</div>
+ 

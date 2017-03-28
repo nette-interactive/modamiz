@@ -1,0 +1,14 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.Models
+@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+
+@model CommentModel
+
+@using (Html.BeginForm("Edit", "ArticleComment", FormMethod.Post, new { id = "comment-form" }))
+{
+    <input type="hidden" name="id" value="@Model.Id"/>
+    <input type="hidden" id="comment-article-se-name" name="ArticleSEName" value="@Model.ArticleSEName"/>
+    
+    @Html.Partial(ViewNames.Article_CommentsEditor, Model.Text)
+    
+    <button class="k-button submit-comment" type="submit" value="@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Submit")">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Submit")</button>
+}

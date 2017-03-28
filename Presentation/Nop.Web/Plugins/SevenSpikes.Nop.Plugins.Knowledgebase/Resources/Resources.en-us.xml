@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language name="English">
+  <LocaleResource Name="SevenSpikes.Plugins.Knowledgebase.Admin.Menu.MenuName">
+    <Value>Knowledgebase</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Article">
+    <Value>Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Article.Categories">
+    <Value>Categories</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Article.LimitedToStores">
+    <Value>Limited To Stores</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Article.LimitedToStores.Hint">
+    <Value>Search Limited To Stores</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Article.SEO">
+    <Value>SEO</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Common.None">
+    <Value>None</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article">
+    <Value>Manage Articles</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article">
+    <Value>Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.AddedToMenu">
+    <Value>Added To Menu</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.AddedToMenu">
+    <Value>Add to menu</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.AddedToMenu.Hint">
+    <Value>Is Article Added To Menu</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.AddedToMenu.Hint">
+    <Value>With this setting you could choose whether or not to display the current article in the navigation.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.AddNew">
+    <Value>Add New</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.AddNew">
+    <Value>Add New</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.AuthorName">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.BackToList">
+    <Value>Back To List</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Category.AddNew">
+    <Value>Add Existing Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Category.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Category.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Content">
+    <Value>Content</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Content">
+    <Value>Content</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Content.Hint">
+    <Value>Article Content</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Content.Hint">
+    <Value>Content for the article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.CreatedOnUtc">
+    <Value>Creation Date</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.CreationDate">
+    <Value>Creation Date</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.CreationDate">
+    <Value>Created on</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Deleted">
+    <Value>Deleted</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Deleted">
+    <Value>Deleted</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.DisplayOrder.Hint">
+    <Value>Used for sorting articles withouth category.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.EditArticleDetails">
+    <Value>Add New</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.EditArticleDetails">
+    <Value>Edit article details</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.FieldValidationMessages.Content">
+    <Value>Invalid Content!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.FieldValidationMessages.Title">
+    <Value>Invalid Title!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.FieldValidationMessages.NavigationTitle">
+    <Value>Invalid Navigation Title!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.IsCurrent">
+    <Value>Is Current</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.LastEditor">
+    <Value>Last Edited By</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.LimitedToStores.Hint">
+    <Value>Limite To Certain Stores</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.NavigationTitle">
+    <Value>Navigation Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.NavigationTitle.Hint">
+    <Value>The title of the article in the navigation menu</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Published">
+    <Value>Published</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Published">
+    <Value>Published</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Published.Hint">
+    <Value>Is Article Published</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Published.Hint">
+    <Value>With this setting you could publish your article.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.RelatedArticle.AddNew">
+    <Value>Add New</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.RelatedArticles">
+    <Value>Related Articles</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.RelatedArticles.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.RelatedArticles.Title">
+    <Value>Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.RevisionNumber">
+    <Value>Revision Number</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SaveBeforeEdit">
+    <Value>You need to save the article before you can map anything to it.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchArticleTitle">
+    <Value>Article Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchArticleTitle.Hint">
+    <Value>Search Article Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchAuthor">
+    <Value>Article Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchAuthor.Hint">
+    <Value>Search Article Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchCategory">
+    <Value>Article Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchCategory.Hint">
+    <Value>Search Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchStore">
+    <Value>Store</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SearchStore.Hint">
+    <Value>Search Store</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEName">
+    <Value>SEO Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEName">
+    <Value>SE Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEName.Hint">
+    <Value>SEO Name For Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEName.Hint">
+    <Value>SE Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEODescription">
+    <Value>SEO Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEODescription">
+    <Value>SEO Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEODescription.Hint">
+    <Value>SEO Description For Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEODescription.Hint">
+    <Value>SEO Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOKeywords">
+    <Value>SEO Keywords</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOKeywords">
+    <Value>SEO Keywords</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOKeywords.Hint">
+    <Value>SEO Keywords For Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOKeywords.Hint">
+    <Value>SEO Keywords</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOTitle">
+    <Value>SEO Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOTitle">
+    <Value>SEO Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOTitle.Hint">
+    <Value>SEO Title For Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SEOTitle.Hint">
+    <Value>SEO Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SuccessfullyCreated">
+    <Value>Article successfully created.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SuccessfullyDeleted">
+    <Value>Article Successfully Deleted</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.SuccessfullyEdited">
+    <Value>Article successfully edited.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.KnowledgeBaseCategory.SuccessfullyDeleted">
+    <Value>Category Successfully Deleted</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Title">
+    <Value>Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Article.Title.Hint">
+    <Value>Article Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleRevision.ArticleId">
+    <Value>Article Id</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleRevision.Content">
+    <Value>Content</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleRevision.CreatedOnUtc">
+    <Value>Created on</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleRevision.IsCurrent">
+    <Value>Is Current</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleRevision.RevisionNumber">
+    <Value>Revision Number</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleToKnowledgebaseCategory.ArticleId">
+    <Value>Article Id</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleToKnowledgebaseCategory.CategoryId">
+    <Value>Category Id</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.ArticleToKnowledgebaseCategory.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category">
+    <Value>Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category">
+    <Value>Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.AddNew">
+    <Value>Add New</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.Articles">
+    <Value>Articles</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.BackToList">
+    <Value>Back To List</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.CreatedOnUtc">
+    <Value>Created on</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.Deleted">
+    <Value>Deleted</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.DisplayOrder.Hint">
+    <Value>Category Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.EditCategoryDetails">
+    <Value>Details</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.FieldValidationMessages.Title">
+    <Value>Invalid Name!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.GeneralSettings">
+    <Value>General Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.LimitedToStores">
+    <Value>Limited To Stores</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.LimitedToStores.Hint">
+    <Value>Search Limited To Stores</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.Name.Hint">
+    <Value>Category Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.ParentCategory">
+    <Value>Parent Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.ParentCategory.Hint">
+    <Value>Parent Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.Published">
+    <Value>Published</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.Published.Hint">
+    <Value>Is Category Published</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SaveBeforeEdit">
+    <Value>You need to save the category before you can map anything to it.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SearchCategoryName">
+    <Value>Category Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SearchCategoryName.Hint">
+    <Value>Search Category Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SearchParentCategory">
+    <Value>Parent Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SearchParentCategory.Hint">
+    <Value>Search Parent Category</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEName">
+    <Value>SE Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEName.Hint">
+    <Value>Category SE Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEO">
+    <Value>SEO</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEODescription">
+    <Value>SEO Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEODescription.Hint">
+    <Value>Category SEO Description</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEOKeywords">
+    <Value>SEO Keywords</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEOKeywords.Hint">
+    <Value>Category SEO Keywords</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEOTitle">
+    <Value>SEO Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SEOTitle.Hint">
+    <Value>Category SEO Title</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SuccessfullyCreated">
+    <Value>Knowledgebase category successfully created.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Category.SuccessfullyEdited">
+    <Value>Knowledgebase category successfully edited.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Comment">
+    <Value>Comments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Comment.Approved">
+    <Value>Approved</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Comment.Author">
+    <Value>Author</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Comment.CreationDate">
+    <Value>Creation Date</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.Comment.Text">
+    <Value>Content</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.RelatedArticle.Article1">
+    <Value>First Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.RelatedArticle.Article2">
+    <Value>Second Article</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Entities.RelatedArticle.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Set">
+    <Value>Set</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings">
+    <Value>Knowledgebase Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.AllowUsersToEditTheirComments">
+    <Value>Allow Users To Edit Their Comments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.AllowUsersToEditTheirComments.Hint">
+    <Value>Allow Users To Edit Their Comments. Note: The admin could not edit user comments!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.CommentsRequireApproval">
+    <Value>Comments Requre Approval</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.CommentsRequireApproval.Hint">
+    <Value>If checked then all new comments needs to be approved by the store owner. Only approved comments are visible.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.Enable">
+    <Value>Enable</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.Enable.Hint">
+    <Value>Enable the plugin</Value>
+  </LocaleResource>  
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.EnableAdministratorsOnlyAccess">
+    <Value>Enable Administrators Only Access</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.EnableAdministratorsOnlyAccess.Hint">
+    <Value>Only store administrators can access the knowledgebase in the public area.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.EnableCategoryPage">
+    <Value>Enable Category Page</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.EnableCategoryPage.Hint">
+    <Value>Specify whether the knowledgebase category page can be accessed or not from the navigation menu.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.EnableComments">
+    <Value>Enable Comments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.EnableComments.Hint">
+    <Value>Enable Comments On Article Page</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.GeneralSettings">
+    <Value>General Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.ShowCaptchaForComments">
+    <Value>Show Captcha For Comments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.ShowCaptchaForComments.Hint">
+    <Value>Note: You need to have CAPTCHA enabled from Security Settings.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Submenus.ManageArticles">
+    <Value>Manage Articles</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Submenus.ManageCategories">
+    <Value>Manage Categories</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Submenus.ManageComments">
+    <Value>Manage Comments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Submenus.Settings">
+    <Value>Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.ViewComments">
+    <Value>View Comments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.BackToWebsite">
+    <Value>Back to website &gt;</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.CopyrightInfo">
+    <Value>Copyright © 2011-{0} Seven Spikes Inc</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Author">
+    <Value>Author:</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Categories">
+    <Value>Categories: </Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Author">
+    <Value>Author: </Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.CreatedOn">
+    <Value>Created on: </Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Delete">
+    <Value>Delete</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Edit">
+    <Value>Edit</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Submit">
+    <Value>Submit Comment</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.SuccessfullySubmitedForApproval">
+    <Value>Your comment has been successfully submited and will be shown after approval by the admin.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Comments">
+    <Value>Comments: </Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.CreatedOn">
+    <Value>Created On:</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Edit">
+    <Value>Edit</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.FieldValidationMessages.Text">
+    <Value>Message is required!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.LastEditedBy">
+    <Value>Last Edited By:</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.NoComments">
+    <Value>No comments for this article.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.NoRelatedArticles">
+    <Value>No Related Articles.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.RelatedArticles">
+    <Value>Related Articles</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Article.Uncategorised">
+    <Value>Uncategorised</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Categories.ChildCategories">
+    <Value>Child Categories</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Categories.NoArticles">
+    <Value>No articles for this category.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Categories.NoChildCategories">
+    <Value>No child categories for this category.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Category.CreatedOn">
+    <Value>Created On:</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Category.Edit">
+    <Value>Edit</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.Comments.CouldnotWriteComments">
+    <Value>You need to be logged in to write comments.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Entities.NoAccess">
+    <Value>This page is not accessible.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Mobile.NavButton">
+    <Value>Open navigation</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Mobile.SearchPanelButton">
+    <Value>Open search</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Search.NoResults">
+    <Value>No results found!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Search.ResultsTitle">
+    <Value>Results for: "{0}"</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Search.SearchButton">
+    <Value>Search</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Title">
+    <Value>Documentation</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.User.Guest">
+    <Value>Anonymous</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.Reindex">
+    <Value>Reindex</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.NumberOfResultsInDropdown">
+    <Value>Number Of Results In Dropdown</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.NumberOfResultsInDropdown.Hint">
+    <Value>Set the number of results in the autocomplete dropdown when searching.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.ResultsPageNumberOfItemsPerPage">
+    <Value>Number Of Items Per Page</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.ResultsPageNumberOfItemsPerPage.Hint">
+    <Value>Set the number of items per page on results page.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.HighlightedTextChunkLength">
+    <Value>Highlighted Text Chunk Length</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.HighlightedTextChunkLength.Hint">
+    <Value>Set the length of the highlighted text chunk. This is the number of characters returned around the found search term.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Admin.Settings.Reindex.Hint">
+    <Value>Click the button if you want to re-index the knowledgebase articles and categories.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Search.TextChunkWrapper">
+    <Value>{0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.Knowledgebase.Public.Search.AdvancedSearchFor">
+    <Value>Search for</Value>
+  </LocaleResource>
+</Language>

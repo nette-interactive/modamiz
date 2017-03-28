@@ -1,0 +1,129 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models
+
+@model ManageTicketNotesPublicModel
+
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts(T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ViewTicketNotes").Text + "#" + Model.TicketModel.Id);
+
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.rtl.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.default.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.common.min.css");
+    Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.css");
+
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    if (supportRtl)
+    {
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.rtl.css");
+    }
+
+    Html.AddScriptParts(ResourceLocation.Foot, "~/Administration/Scripts/kendo/2014.1.318/kendo.web.min.js");
+}
+
+@section left
+{
+    @Html.Partial("CustomerNavigation", Model.NavigationModel)
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        @Html.Partial("_JSNavigation", "manageTickets")
+
+        var defaultTools = kendo.ui.Editor.defaultTools;
+
+        defaultTools["insertLineBreak"].options.shift = false;
+        defaultTools["insertParagraph"].options.shift = true;
+
+        $("#@Html.FieldIdFor(model => model.SubmitTicketNoteModel.NoteContent)").kendoEditor({
+            encoded: false
+        });
+
+        $("#@Html.FieldIdFor(model => model.SubmitTicketNoteModel.NoteContent)").data("kendoEditor")
+           .toolbar
+           .element
+           .find("select.k-formatting").data("kendoSelectBox")
+              .one("open", function (e) {
+                  setTimeout(function () {
+                      e.sender.popup.wrapper.addClass("dropdown-wrapper paragraph-select");
+                  });
+              });
+
+        $(document).on("click", ".show-add-note", function (e) {
+            e.preventDefault();
+
+            $('#submit-reply').slideToggle();
+        });
+    });
+
+    // http://stackoverflow.com/questions/8466643/jquery-validate-enable-validation-for-hidden-fields/8565769#8565769
+    // enable the validation of the hidden fields( kendo fields )
+    $.validator.setDefaults({
+        ignore: [],
+    });
+</script>
+
+<div class="page account-page ticketing-page view-ticket-notes-page">
+    <div class="page-title">
+        <h1 class="pt-text">@T("Account.MyAccount") - @T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ViewTicketNotes") #@Model.TicketModel.Id</h1>
+    </div>
+
+    <div class="page-body">
+        <div class="conversation">
+            <div class="ticket">
+                <div class="ticket-header">
+                    <div class="ticket-information">
+                        <h3 class="ticket-title">@Model.TicketModel.Subject</h3>
+                        <span class="ticket-date">
+                            @T("SevenSpikes.HelpDesk.Public.ViewTicket.RaisedOn") @Model.TicketModel.CreatedOnUtc
+                            @T("SevenSpikes.HelpDesk.Public.ViewTicket.By") @Model.TicketModel.CustomerName
+                        </span>
+                    </div>
+
+                    <div class="ticket-buttons">
+                        <button class="show-add-note k-button">@T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ShowAddNote")</button>
+
+                        <a href="@Html.Raw(Url.Action("ViewTicket", "HelpDesk", new { id = Model.TicketModel.Id }))" class="return-to-ticket k-button">
+                            @T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ReturnToTheTicket")
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submit-reply" class="reply-form">
+                @using (Html.BeginForm("SubmitTicketNote", "HelpDesk", FormMethod.Post, new { id = "submit-ticket-note-Form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="message-error">
+                        @Html.ValidationSummary(true)
+                    </div>
+
+                    @Html.Hidden("ticketId", Model.TicketModel.Id)
+
+                    <div class="fieldset">
+                        <div class="form-fields">
+                            <div class="inputs">
+                                @Html.LabelFor(model => model.SubmitTicketNoteModel.NoteContent, new { }, ":")
+                                @Html.TextAreaFor(model => model.SubmitTicketNoteModel.NoteContent, new { style = "height: 300px;" })
+                                @Html.RequiredHint()
+                                @Html.ValidationMessageFor(model => model.SubmitTicketNoteModel.NoteContent)
+                            </div>
+
+                            <div class="buttons">
+                                <button type="submit" class="add-note k-button">@T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes.AddNote")</button>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            </div>
+
+            <div class="ticket-comments">
+                @Html.Partial("_TicketNotes", Model.TicketModel.TicketNotes)
+            </div>
+        </div>
+    </div>
+</div>

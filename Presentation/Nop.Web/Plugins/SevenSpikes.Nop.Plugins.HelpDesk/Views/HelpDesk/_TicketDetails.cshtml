@@ -1,0 +1,64 @@
+﻿@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+@using System.Linq;
+
+@model ViewTicketPublicModel
+
+@{
+    var products = Model.TicketModel.TicketProducts.Select(x => x.ProductName);
+    var allProducts = string.Join(", ", products);
+}
+
+<ul class="details-list">
+    <li class="details-item">
+        <label class="detail-label">@T("SevenSpikes.HelpDesk.Public.Ticket.TicketId"):</label>
+        <span class="detail-value">@Model.TicketModel.Id</span>
+    </li>
+    <li class="details-item">
+        <label class="detail-label">@T("SevenSpikes.HelpDesk.Public.Ticket.Product"):</label>
+        <span class="detail-value">@allProducts</span>
+    </li>
+    <li class="details-item">
+        <label class="detail-label">@T("SevenSpikes.HelpDesk.Public.Ticket.Department"):</label>
+        <span class="detail-value">@Model.TicketModel.TicketDepartmentName</span>
+    </li>
+    <li class="details-item">
+        <label class="detail-label">@T("SevenSpikes.HelpDesk.Public.Ticket.Owner"):</label>
+        <span class="detail-value">@Model.TicketModel.TicketOwnerName</span>
+    </li>
+    <li class="details-item">
+        <label class="detail-label">@T("SevenSpikes.HelpDesk.Public.Ticket.TicketStatus"):</label>
+        <span class="detail-value">@Model.TicketModel.TicketStatusName</span>
+    </li>
+    <li class="details-item">
+        <label class="detail-label">@T("SevenSpikes.HelpDesk.Public.Ticket.Deadline"):</label>
+        <span class="detail-value">@Model.TicketModel.Deadline @T("SevenSpikes.HelpDesk.Public.Ticket.Deadline.Hours")</span>
+    </li>
+    <li class="details-item">
+        <label class="detail-label">@T("SevenSpikes.HelpDesk.Public.Ticket.LastAnswerUtc"):</label>
+        <span class="detail-value">@Model.TicketModel.LastAnswerUtc</span>
+    </li>
+</ul>
+
+@if (Model.TicketModel.TicketAttributes.Count > 0)
+{
+    <ul class="details-list">
+        @foreach (var ticketAttribute in Model.TicketModel.TicketAttributes)
+        {
+            if (!ViewBag.HasPermissions && ticketAttribute.IsAdminAttribute)
+            {
+                continue;
+            }
+
+            string adminAttribute = string.Empty;
+
+            if (ticketAttribute.IsAdminAttribute)
+            {
+                adminAttribute = "<span style='color: red;'>[admin]</span>";
+            }
+            <li class="details-item">
+                <label class="detail-label">@ticketAttribute.Name @Html.Raw(adminAttribute)</label>
+                <span class="detail-value">@ticketAttribute.ChosenValue</span>
+            </li>
+        }
+    </ul>
+}    

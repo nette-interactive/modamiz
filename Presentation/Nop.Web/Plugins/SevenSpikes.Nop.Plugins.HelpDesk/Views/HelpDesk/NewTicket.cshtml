@@ -1,0 +1,220 @@
+﻿@using Nop.Core;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Domain.Settings;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Framework.Security.Captcha;
+
+
+@model NewTicketPublicModel
+
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts(T("SevenSpikes.HelpDesk.Public.NewTicketLink").Text);
+
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.rtl.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.default.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.common.min.css");
+    Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.css");
+
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    if (supportRtl)
+    {
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.rtl.css");
+    }
+
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Scripts/HelpDesk.common.js");
+    Html.AddScriptParts(ResourceLocation.Foot, "~/Administration/Scripts/kendo/2014.1.318/kendo.web.min.js");
+
+    var helpDeskSettings = EngineContext.Current.Resolve<HelpDeskSettings>();
+}
+
+@section left
+{
+    @Html.Partial("CustomerNavigation", Model.NavigationModel)
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        @Html.Partial("_JSNavigation", "newTicket")
+
+        var defaultTools = kendo.ui.Editor.defaultTools;
+
+        defaultTools["insertLineBreak"].options.shift = false;
+        defaultTools["insertParagraph"].options.shift = true;
+
+        $("#@Html.FieldIdFor(model => model.TicketModel.Message)").kendoEditor({
+            encoded: false
+        });
+
+        $("#@Html.FieldIdFor(model => model.TicketModel.Message)").data("kendoEditor")
+           .toolbar
+           .element
+           .find("select.k-formatting").data("kendoSelectBox")
+              .one("open", function (e) {
+                  setTimeout(function () {
+                      e.sender.popup.wrapper.addClass("dropdown-wrapper paragraph-select");
+                  });
+              });
+
+        $('#newTicketForm [type="submit"]').on('click', function (e) {
+            var message = $('#TicketModel_Message').val();
+            var fileUploaderValue = $('[name="TicketAttachments"].valid').val();
+            var filesUploaded = fileUploaderValue != undefined && fileUploaderValue !== '';
+            var target = $(this);
+
+            if (message.toLowerCase().indexOf('attach') !== -1 && !filesUploaded) {
+                if (target.attr('isValid') == null) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    createKendoConfirm('no-files-confirmation', function () {
+                        target.attr('isValid', 'true');
+                        target.click();
+                    }, function () {
+                        target.removeAttr('isValid');
+                    });
+                }
+            }
+        });
+    });
+
+    // http://stackoverflow.com/questions/8466643/jquery-validate-enable-validation-for-hidden-fields/8565769#8565769
+    // enable the validation of the hidden fields( kendo fields )
+    $.validator.setDefaults({
+        ignore: [],
+    });
+</script>
+
+<div class="page account-page ticketing-page new-ticket-page">
+    <div class="page-title">
+        <h1 class="pt-text">@T("SevenSpikes.HelpDesk.Public.NewTicketLink")</h1>
+    </div>
+    @if (Model.ShowDeadlineWorkingHoursAndWorkingDay)
+    {
+        <div class="working-days-wrapper">
+            <h3 class="details"><span>@T("SevenSpikes.HelpDesk.Public.WorkingWeekDays"):</span> @Model.WorkingWeekDays</h3>
+            <h3 class="details"><span>@T("SevenSpikes.HelpDesk.Public.WorkingHours"):</span> @String.Format(T("SevenSpikes.HelpDesk.Public.WorkingHoursStartEnd").Text, Model.StartWorkingHour, Model.EndWorkingHour)</h3>
+            <h3 class="details"><span>@T("SevenSpikes.HelpDesk.Public.Deadline"):</span>  @Model.Deadline @T("SevenSpikes.HelpDesk.Public.WorkingHours")</h3>
+        </div>
+    }
+
+
+    @Html.Action("TopicBlock", "Topic", new { systemName = "SubmitTicketInfo" })
+
+    <div class="page-body" id="addNewTicket">
+        @using (Html.BeginForm("NewTicket", "HelpDesk", FormMethod.Post, new { id = "newTicketForm", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            {
+                var messageErrorHtml = Html.ValidationSummary(true);
+
+                if (!MvcHtmlString.IsNullOrEmpty(messageErrorHtml))
+                {
+                    <div class="message-error">
+                        @messageErrorHtml
+                    </div>
+                }
+            }
+
+            <div class="fieldset">
+                <div class="title">
+                    <strong class="title-text">@T("SevenSpikes.HelpDesk.Public.NewTicketLink.GeneralInformation")</strong>
+                </div>
+                <div class="form-fields">
+                    <div class="inputs">
+                        @Html.LabelFor(model => model.TicketModel.TicketDepartmentId, new { }, ":")
+                        @Html.DropDownListFor(model => model.TicketModel.TicketDepartmentId, Model.AvailableDepartments)
+                        @Html.RequiredHint()
+                        @Html.ValidationMessageFor(model => model.TicketModel.TicketDepartmentId)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(model => model.TicketModel.CustomerName, new { }, ":")
+                        @Html.EditorFor(model => model.TicketModel.CustomerName)
+                        @Html.RequiredHint()
+                        @Html.ValidationMessageFor(model => model.TicketModel.CustomerName)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(model => model.TicketModel.TicketProductIds, new { }, ":")
+
+                        @Html.EditorFor(model => model.TicketModel.TicketProductIds, new { AutoSelectedProducts = Model.AutoSelectedProducts })
+
+                        @if (helpDeskSettings.IsProductFieldRequired)
+                        {
+                            @Html.RequiredHint()
+                            @Html.ValidationMessageFor(model => model.TicketModel.TicketProductIds)
+                        }
+                    </div>
+                </div>
+            </div>
+
+            if (Model.TicketModel.TicketAttributes.Count > 0)
+            {
+                <div class="fieldset">
+                    <div class="title">
+                        <strong class="title-text">@T("SevenSpikes.HelpDesk.Public.NewTicketLink.AdditionalInformation")</strong>
+                    </div>
+                    <div class="form-fields">
+                        @Html.Partial("_TicketAttributes", Model.TicketModel.TicketAttributes)
+                    </div>
+                </div>
+            }
+
+            <div class="fieldset">
+                <div class="title">
+                    <strong class="title-text">@T("SevenSpikes.HelpDesk.Public.NewTicketLink.MessageInformation")</strong>
+                </div>
+                <div class="form-fields">
+                    <div class="inputs">
+                        @Html.LabelFor(model => model.TicketModel.CCEmail, new { }, ":")
+                        @Html.EditorFor(model => model.TicketModel.CCEmail)
+                        @Html.ValidationMessageFor(model => model.TicketModel.CCEmail)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(model => model.TicketModel.Subject, new { }, ":")
+                        @Html.EditorFor(model => model.TicketModel.Subject)
+                        @Html.RequiredHint()
+                        @Html.ValidationMessageFor(model => model.TicketModel.Subject)
+                    </div>
+                    <div class="inputs">
+                        @Html.LabelFor(model => model.TicketModel.Message, new { }, ":")
+                        @Html.TextAreaFor(model => model.TicketModel.Message, new { style = "height: 350px;" })
+                        @Html.RequiredHint()
+                        @Html.ValidationMessageFor(model => model.TicketModel.Message)
+                    </div>
+                </div>
+            </div>
+
+            <div class="fieldset">
+                <div class="title">
+                    <strong class="title-text">@T("SevenSpikes.HelpDesk.Public.NewTicketLink.Fileattachments")</strong>
+                </div>
+                <div class="form-fields">
+                    <div class="inputs upload">
+                        @Html.EditorFor(model => model.TicketAttachments)
+                    </div>
+                </div>
+            </div>
+
+            if (Model.DisplayCaptcha)
+            {
+                <div class="captcha-box">
+                    @Html.Raw(Html.GenerateCaptcha())
+                </div>
+            }
+
+            <div class="buttons">
+                <button type="submit" class="k-button">@T("SevenSpikes.HelpDesk.Public.NewTicketLink.SubmitATicket")</button>
+            </div>
+        }
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="no-files-confirmation">
+    <p class="message">You mentioned "attach", but have not uploaded any files. Submit anyway?</p>
+
+    <button class="confirm">Yes</button>
+    <button class="cancel">No</button>
+</script>

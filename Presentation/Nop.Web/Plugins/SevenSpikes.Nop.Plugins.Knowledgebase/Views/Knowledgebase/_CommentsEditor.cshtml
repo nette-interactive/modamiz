@@ -1,0 +1,13 @@
+﻿@model string
+
+<input type="text" id="comment-text" name="text" value="@Model"/>
+    
+<script>
+    KindEditor.ready(function (K) {
+
+        window.editor = K.create('#comment-text', {
+            
+            items: ['bold', 'italic', 'underline', 'code', 'link', 'unlink']
+        });
+    });
+</script>

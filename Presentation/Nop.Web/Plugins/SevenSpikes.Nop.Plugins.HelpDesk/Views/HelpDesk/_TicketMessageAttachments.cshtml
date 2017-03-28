@@ -1,0 +1,28 @@
+﻿@using Nop.Core.Infrastructure
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models
+@using SevenSpikes.Nop.Plugins.HelpDesk.Domain.Settings
+
+@model IList<MessageAttachmentModel>
+
+@{
+    var helpDeskSettings = EngineContext.Current.Resolve<HelpDeskSettings>();
+
+    var targetBlank = "_self";
+    
+    if (helpDeskSettings.PreviewAttachmentsInBrowser)
+    {
+        targetBlank = "_blank";
+    }
+}
+
+<ul>
+    @foreach (var attachment in Model)
+    {
+        string url = Url.Content("~/HelpDesk/DownloadFile?guid=") + attachment.MessageAttachmentGuid;
+        string file = attachment.Filename + attachment.Extension;
+        
+        <li>
+            <a class="attachmentLink" href="@url" target="@targetBlank">@file ( @attachment.FileSize )</a>
+        </li>
+    }
+</ul>

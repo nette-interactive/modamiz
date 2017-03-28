@@ -1,0 +1,54 @@
+﻿@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+
+@model IList<MessageModel>
+
+@foreach (var message in Model)
+{
+    var name = message.CustomerName;
+    var cssClass = "";
+                
+    if (string.IsNullOrEmpty(message.CustomerName))
+    {
+        name = message.StaffName;
+        cssClass = "grey";
+    }
+                                    
+    <div class="ticket-comment @cssClass">
+        <div class="comment-header">
+            @if (ViewBag.HasPermissions)
+            {
+                var id = message.CustomerId;
+                var email = message.CustomerEmail;
+                    
+                if(string.IsNullOrEmpty(message.CustomerName))
+                {
+                    id = message.StaffId;
+                    email = message.StaffEmail;
+                }
+                
+                <div class="left"><a class="username-link" href="@(Url.Action("ManageTickets", "HelpDesk", new { customerId = id }))">@name</a> ( <a class="customer-link" href="@(Url.Action("Edit", "Customer", new { area = "Admin", id = id }))">@email</a> )</div>
+                <div class="right"><span class="comment-date">@message.CreatedOnUtc</span><a class="edit-comment" href="@(Url.Action("EditMessage", "HelpDesk", new { id = message.Id }))">@T("SevenSpikes.HelpDesk.Public.EditTicket.Edit")</a></div>
+            }
+            else
+            {
+                <span class="left">@name</span>
+                <span class="right">@message.CreatedOnUtc</span>
+            }
+        </div>
+        <div class="comment-body">
+            @Html.Raw(message.Content)
+        </div>
+
+        @if (message.ShowStaffSignature && string.IsNullOrEmpty(message.CustomerName))
+        {
+            <div class="signature">@Html.Raw(message.StaffSignature)</div>
+        }
+
+        @if (message.Attachments.Count > 0) 
+        { 
+            <div class="attachment-content">
+                @Html.Partial("_TicketMessageAttachments", message.Attachments)
+            </div>
+        }
+    </div>
+}

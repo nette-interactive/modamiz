@@ -1,0 +1,51 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.Domain
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models
+@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+@using Nop.Core.Infrastructure
+@using Nop.Web.Framework.Security.Captcha
+
+@model CommentModel
+
+<script type="text/javascript">
+    // http://stackoverflow.com/questions/8466643/jquery-validate-enable-validation-for-hidden-fields/8565769#8565769
+    // enable the validation of the hidden fields
+    $.validator.setDefaults({
+        ignore: [],
+    });
+</script>
+
+    @using (Html.BeginForm("Create", "ArticleComment", FormMethod.Post, new { id = "comment-form" }))
+    {
+        @Html.AntiForgeryToken()
+        
+        @Html.Hidden("articleId", Model.ArticleId);
+        @Html.Hidden("articleSEName", Model.ArticleSEName);
+
+        @Html.Partial(ViewNames.Article_CommentsEditor, string.Empty)
+
+        @Html.ValidationMessageFor(model => model.Text)
+
+        <div class="message-error">
+            @Html.ValidationSummary(true)
+        </div>
+
+        if (Model.CommentsRequireApproval && 
+            TempData["SuccessfullySubmitedForApproval"] != null && 
+            (bool)TempData["SuccessfullySubmitedForApproval"])
+        {
+            <div class="message-success">
+                @T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.SuccessfullySubmitedForApproval")
+            </div>
+        }
+
+        if (Model.ShowCaptchaForComments)
+        {
+            <div class="captcha-box">
+                @Html.Raw(Html.GenerateCaptcha())
+            </div>
+        }
+
+        <div class="buttons">
+            <button class="submit-comment" type="submit">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Comment.Submit")</button>
+        </div>
+    }

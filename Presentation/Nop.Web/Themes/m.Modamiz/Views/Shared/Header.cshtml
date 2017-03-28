@@ -1,0 +1,42 @@
+﻿
+<div class="top-bar">
+    @Html.Action("CurrencySelector", "Common")
+    @Html.Action("LanguageSelector", "Common")
+</div>
+
+@Html.Action("AdminHeaderLinks", "Common")
+
+<div class="n-header">
+    @Html.Widget("m_header")
+    @Html.Widget("top_navigation")
+
+    @Html.Widget("m_home_page_top")
+
+    @Html.Action("SearchBox", "Catalog")
+
+    @Html.Action("Logo", "Common")
+
+    @Html.Action("HeaderLinks", "Common")
+
+    <div id="flyout-cart">
+        @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+    </div>
+
+    @Html.Widget("header_selectors")
+
+
+    @*<div class="header-upper">
+        <div class="header-selectors-wrapper">
+            @Html.Action("TaxTypeSelector", "Common")
+        </div>
+        <div class="header-links-wrapper">
+            @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+        </div>
+    </div>
+    <div class="header-lower">
+        <div class="header-logo">
+        </div>
+        <div class="search-box store-search-box">
+        </div>
+    </div>*@
+</div>

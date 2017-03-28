@@ -1,0 +1,4 @@
+﻿@model string
+
+$('div.account-navigation-wrapper > ul.account-navigation-list li a.active').addClass('inactive').removeClass('active');
+$('div.account-navigation-wrapper > ul.account-navigation-list li#@(Model) > a').addClass('active');

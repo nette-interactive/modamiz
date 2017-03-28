@@ -1,0 +1,69 @@
+﻿@using (Html.BeginForm("ListResults", "KnowledgebaseSearch", FormMethod.Get, new { id = "kb-search-form" }))
+{
+    <input id="searchterms" class="search-input" type="text" name="phrase" />
+    <button class="search-button" type="submit">@T("SevenSpikes.Knowledgebase.Public.Search.SearchButton")</button>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#searchterms").kendoAutoComplete({
+            highlightFirst: true,
+            minLength: 3,
+            dataTextField: "Title",
+            filter: "contains",
+            template: '<div class="knowledgebase-search-item" data-url="' + '@Url.RouteUrl("HomePage")' + '${ data.SEName }">' +
+                        '<div class="title">${ data.Title }</div>' +
+                        '</div>',
+            select: function (e) {
+                var advancedSearchItemId = this.dataItem(e.item.index()).Id;
+
+                if (advancedSearchItemId === 0) {
+                    e.preventDefault();
+
+                    window.location = '@Url.Action("ListResults", "KnowledgebaseSearch")' + '?phrase=' + $('#searchterms').val();
+                }
+            },
+            dataSource: new kendo.data.DataSource({
+                serverFiltering: true,
+                requestStart: function (e) {
+                    $("#searchterms").addClass("instant-search-busy");
+                },
+                requestEnd: function (e) {
+                    e.response.push({ Title: '@T("SevenSpikes.Knowledgebase.Public.Search.AdvancedSearchFor") "' + $('#searchterms').val() + '"', Id: 0 });
+                },
+                change: function (e) {
+                    $("#searchterms").removeClass("instant-search-busy");
+                },
+                transport: {
+                    read: "@Url.Action("Search", "KnowledgebaseSearch")",
+                    data: function () {
+                        var data = {};
+                        var tokenInput = $('input[name=__RequestVerificationToken]');
+                        if (tokenInput.length) {
+                            data.__RequestVerificationToken = tokenInput.val();
+                        }
+
+                        return data;
+                    },
+                    parameterMap: function () {
+                        return { phrase: $("#searchterms").val() };
+                    }
+                }
+            }),
+            change: function () {
+                var selected = $(".k-list").find(".k-state-selected");
+                var url = selected.find('.knowledgebase-search-item').attr('data-url');
+                if (typeof url === "undefined") {
+                    // do nothing as the value has probably been changed from the onblur event handler rather than from dropdown selection
+                } else {
+                    // navigate to the searched product
+                    window.location.href = url;
+                }
+            },
+            dataBound: function (e) {
+                $(".k-animation-container").addClass("instantSearch");
+                $(e.sender.list).find('li:last').addClass('knowledgebase-autocomplete-last-item');
+            }
+        });
+    });
+</script>

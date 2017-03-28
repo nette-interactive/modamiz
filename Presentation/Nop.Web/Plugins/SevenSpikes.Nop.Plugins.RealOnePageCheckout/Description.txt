@@ -1,0 +1,8 @@
+﻿Group: 7Spikes
+FriendlyName: Nop One Page Checkout
+SystemName: SevenSpikes.Nop.Plugins.RealOnePageCheckout
+Version: 3.90
+SupportedVersions: 3.90
+Author: Seven Spikes
+DisplayOrder: 1
+FileName: SevenSpikes.Nop.Plugins.RealOnePageCheckout.dll

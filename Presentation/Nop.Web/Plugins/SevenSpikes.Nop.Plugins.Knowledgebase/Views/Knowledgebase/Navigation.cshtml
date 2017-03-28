@@ -1,0 +1,126 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Domain;
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models;
+
+@model KnowledgebaseSettingsModel
+
+@{
+    var storeLocation = EngineContext.Current.Resolve<IWebHelper>().GetStoreLocation();
+
+    if (!storeLocation.EndsWith("/"))
+    {
+        storeLocation += "/";
+    }
+
+    //resources
+    Html.AddScriptParts(ResourceLocation.Foot, "~/Administration/Scripts/kendo/2014.1.318/kendo.web.min.js");
+}
+
+<div class="knowledgebase-navigation-wrap">
+    <div class="knowledgebase-navigation">
+        <div id="navigation-treeview" class="nav-treeview"></div>
+
+        <script>
+            $(document).ready(function () {
+
+                function expandNavigation(nodes) {
+                    return function() {
+                        var node;
+                        var currentDataSource = (nodes[nodes.length - 1], this.dataSource);
+
+                        for (var index = 0; index < nodes.length; index++) {
+
+                            node = currentDataSource.get(nodes[index]);
+                            node.set("expanded", !0);
+
+                            currentDataSource = node.children;
+                        }
+
+                        node.set("selected", !0);
+
+                        this.unbind("dataBound", arguments.callee);
+                    }
+                }
+
+                function navigationTemplate() {
+                    return function(currentNode) {
+                        var node = currentNode.item;
+                        var nodeText = node.Text;
+                        var nodeSEName = node.SEName;
+
+                        @if (!Model.EnableCategoryPage)
+                        {
+                            <text>
+                            if (node.hasChildren) {
+                                return nodeText;
+                            }
+                            </text>
+                        }
+                        
+                        return '<a href="@(storeLocation)' + nodeSEName + '">' + nodeText + "</a>";
+                    };
+                }
+
+                function preventParentSelection(e) {
+                    var dataItem = this.dataItem(e.node);
+
+                    @if (!Model.EnableCategoryPage)
+                    {
+                        <text>
+                        if(dataItem.hasChildren) {
+                            e.preventDefault();
+
+                            this.toggle(e.node);
+
+                            return;
+                        }
+                        </text>
+                    }
+                
+                    window.location.href = "@Url.RouteUrl("HomePage")" + dataItem.SEName;
+                }
+
+                $("#navigation-treeview").kendoTreeView({
+                    dataSource: {
+                        transport: {
+                            read: {
+                                url: "@Html.Raw(Url.Action("ListAll", "Knowledgebase"))",
+                                dataType: "json",
+                                data: function () {
+                                    var data = {};
+                                    var tokenInput = $('input[name=__RequestVerificationToken]');
+                                    if (tokenInput.length) {
+                                        data.__RequestVerificationToken = tokenInput.val();
+                                    }
+
+                                    return data;
+                                }
+                            }
+                        },
+                        schema: {
+                            model: {
+                                id: "SEName",
+                                hasChildren: "Children",
+                                children: "Children",
+                                SEName: "SEName"
+                            }
+                        }
+                    },
+                    dataTextField: "Text",
+                    dataSpriteCssClassField: "SpriteCssClass",
+
+                    @if (TempData.ContainsKey("Nodes"))
+                    {
+                        <text>
+                            dataBound: expandNavigation([@Html.Raw(TempData["Nodes"])]),
+                        </text>
+                    }
+                    
+                    select: preventParentSelection,
+                    template: navigationTemplate()
+                });
+            });
+        </script>
+    </div>
+</div>

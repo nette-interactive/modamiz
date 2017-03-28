@@ -1,0 +1,47 @@
+﻿@using Nop.Core
+@using Nop.Core.Infrastructure
+@using Nop.Services.Localization
+@using Nop.Web.Framework.Themes
+@{
+    //logo path
+    var currentThemeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+    var logoPath = "~/Themes/" + currentThemeName + "/Content/images/logo.png";
+
+    //store name
+    var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+    var store = EngineContext.Current.Resolve<IStoreContext>().CurrentStore;
+
+}
+
+<div id="header">
+    @Html.Widget("header")
+
+    <h1 id="logo">
+        <a href="@Url.RouteUrl("HomePage")" alt="@storeName">
+            <img src="@Url.Content(logoPath)" alt="@storeName" />
+        </a>
+    </h1>
+
+    <div class="top-search-icon"></div>
+    <div class="top-search">
+        @Html.Action("SearchBox", "Catalog")
+    </div>
+    <div class="top-filter">
+        @Html.Action("CurrencySelector", "Common")
+        @Html.Action("LanguageSelector", "Common")
+        <ul>
+            <li><a href="#" class="top-support">0850 511 14 25</a></li>
+        </ul>
+    </div>
+    @Html.Action("TaxTypeSelector", "Common")
+    @*@Html.Widget("header_selectors")*@
+
+    <div id="flyout-cart">
+        @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+    </div>
+
+    @Html.Action("HeaderLinks", "Common")
+
+</div>
+
+

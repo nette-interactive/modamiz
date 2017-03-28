@@ -1,0 +1,161 @@
+﻿@using SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+
+@model IList<TicketAttributeModel>
+
+@{
+    if (Model.Count == 0) 
+    { 
+        return;
+    }
+
+    IDictionary<int, AttributeControlType> types = new Dictionary<int, AttributeControlType>();
+}
+
+<ul id="ticket-attribute-filters" class="attribute-filter-list filter-list">
+    @foreach (var attribute in Model)
+    {
+        <li class="filter-item">
+            <label class="filter-label">@attribute.Name</label>
+            @{
+                string controlId = string.Format("ticket_attribute_{0}", attribute.Id);
+
+                switch (attribute.AttributeControlType)
+                {
+                    case AttributeControlType.DropdownList:
+                        {
+                            <select name="@(controlId)" id="@(controlId)">
+                                <option value="-1">-- select --</option>
+
+                                @foreach (var taValue in attribute.Values)
+                                {
+                                    <option value="@taValue.Id">@taValue.Name</option>
+                                }
+                            </select>
+
+                                types.Add(attribute.Id, AttributeControlType.DropdownList);
+                        }
+                        break;
+                    case AttributeControlType.RadioList:
+                        {
+                            <ul class="option-list">
+                                <li>
+                                    <input id="@(controlId)_0" type="radio" name="@(controlId)" value="-1" checked="checked" />
+                                    <label for="@(controlId)_0">-- select --</label>
+                                </li>
+                                @foreach (var taValue in attribute.Values)
+                                {
+                                    <li>
+                                        <input id="@(controlId)_@(taValue.Id)" type="radio" name="@(controlId)" value="@taValue.Id" />
+                                        <label for="@(controlId)_@(taValue.Id)">@taValue.Name</label>
+                                    </li>
+                                }
+                            </ul>
+
+                                types.Add(attribute.Id, AttributeControlType.RadioList);
+                        }
+                        break;
+                    case AttributeControlType.Checkboxes:
+                        {
+                            <ul class="option-list">
+                                @foreach (var taValue in attribute.Values)
+                                {
+                                    <li>
+                                        <input id="@(controlId)_@(taValue.Id)" type="checkbox" name="@(controlId)" value="@taValue.Id" />
+                                        <label for="@(controlId)_@(taValue.Id)">@taValue.Name</label>
+                                    </li>
+                                }
+                            </ul>
+
+                                types.Add(attribute.Id, AttributeControlType.Checkboxes);
+                        }
+                        break;
+                    case AttributeControlType.TextBox:
+                        {
+                            <input name="@(controlId)" type="text" class="textbox" id="@(controlId)" />
+
+                            types.Add(attribute.Id, AttributeControlType.TextBox);
+                        }
+                        break;
+                }
+            }
+        </li>
+    }
+</ul>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        @{
+            IList<string> filtersToClear = new List<string>();
+            
+            foreach (var dropdown in types)
+            {
+                int ticketAttributeId = dropdown.Key;
+                string controlId = string.Format("ticket_attribute_{0}", ticketAttributeId);
+
+                switch (dropdown.Value)
+                {
+                    case AttributeControlType.DropdownList:
+                        {
+                            filtersToClear.Add(string.Format("$('#{0}').data('kendoDropDownList').value('-1');\n", controlId));
+                                
+                            <text>
+                                $("#@controlId").kendoDropDownList({
+                                    change: function () {
+                                        applyFilter("Attribute_@(ticketAttributeId)", this.value());
+                                    },
+                                });
+
+                                $('#@controlId').data('kendoDropDownList').one("open", function (e) {
+                                    setTimeout(function () {
+                                        e.sender.popup.wrapper.addClass("dropdown-wrapper");
+                                    });
+                                });
+                            </text>
+                        }
+                        break;
+                    case AttributeControlType.RadioList:
+                        {
+                            filtersToClear.Add(string.Format("$('input[name=\"{0}\"]').attr('checked', false);\n", controlId));
+                            
+                            <text>
+                                $("input[name=@(controlId)]").change(function () {
+                                    applyFilter("Attribute_@(ticketAttributeId)", $(this).val());
+                                });
+                            </text>
+                        }
+                        break;
+                    case AttributeControlType.Checkboxes:
+                        {
+                            filtersToClear.Add(string.Format("$('input[name=\"{0}\"]').attr('checked', false);\n", controlId));
+                            
+                            <text>
+                                $("input[name=@(controlId)]").change(function () {
+                                    applyFilter("Attribute_@(ticketAttributeId)", $(this).val(), "contains");
+                                });
+                            </text>
+                        }
+                        break;
+                    case AttributeControlType.TextBox:
+                        {
+                            filtersToClear.Add(string.Format("$('#{0}').val('');\n", controlId));
+                            
+                            <text>
+                                $("#@controlId").change(function () {
+                                    applyFilter("TextAttribute_@(ticketAttributeId)", $(this).val());
+                                });
+                            </text>
+                        }
+                        break;
+                }
+            }
+        }
+
+        $("#clear").click(function () {
+            @foreach (var filter in filtersToClear)
+            {
+                @Html.Raw(filter)
+            }
+        });
+    });
+</script>

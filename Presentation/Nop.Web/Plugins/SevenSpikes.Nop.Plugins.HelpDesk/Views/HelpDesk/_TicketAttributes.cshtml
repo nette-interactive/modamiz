@@ -1,0 +1,105 @@
+﻿@using SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+
+@model IList<TicketAttributeModel>
+
+@{
+    IList<string> elementsWithoutTooltip = new List<string>();
+    
+    bool hasAnyTooltips = false;
+}
+
+@foreach (var attribute in Model)
+{
+    string controlId = string.Format("ticket_attribute_{0}", attribute.Id);
+    string tooltip = attribute.Tooltip;
+
+    if (string.IsNullOrEmpty(tooltip))
+    {
+        elementsWithoutTooltip.Add("#" + controlId);
+    }
+    else
+    {
+        hasAnyTooltips = true;
+    }
+    
+    <div class="inputs">
+        <label>@attribute.Name:</label>
+
+        @switch (attribute.AttributeControlType)
+        {
+            case AttributeControlType.DropdownList:
+                {
+                    <select name="@(controlId)" id="@(controlId)" data-title="@tooltip">
+                        @if (!attribute.IsRequired)
+                        {
+                            <option value="0">---</option>
+                        }
+                        @foreach (var taValue in attribute.Values)
+                        {
+                            <option selected="@taValue.IsPreSelected" value="@taValue.Id">@taValue.Name</option>
+                        }
+                    </select>
+                }
+                break;
+            case AttributeControlType.RadioList:
+                {
+                    <ul class="option-list" id="@(controlId)" data-title="@tooltip">
+                        @foreach (var taValue in attribute.Values)
+                        {
+                            <li>
+                                <input id="@(controlId)_@(taValue.Id)" type="radio" name="@(controlId)" value="@taValue.Id" checked="@taValue.IsPreSelected" />
+                                <label for="@(controlId)_@(taValue.Id)">@taValue.Name</label>
+                            </li>
+                        }
+                    </ul>
+                }
+                break;
+            case AttributeControlType.Checkboxes:
+                {
+                    <ul class="option-list" id="@(controlId)" data-title="@tooltip">
+                        @foreach (var taValue in attribute.Values)
+                        {
+                            <li>
+                                <input id="@(controlId)_@(taValue.Id)" type="checkbox" name="@(controlId)" value="@taValue.Id" checked="@taValue.IsPreSelected" />
+                                <label for="@(controlId)_@(taValue.Id)">@taValue.Name</label>
+                            </li>
+                        }
+                    </ul>
+                }
+                break;
+            case AttributeControlType.TextBox:
+                {
+                    <input name="@(controlId)" type="text" placeholder="@(attribute.TextBoxPlaceholder)" data-title="@tooltip" class="textbox" id="@(controlId)" value="@(attribute.ChosenValue)" />
+                }
+                break;
+        }
+
+        @if (attribute.IsRequired)
+        {
+            @Html.RequiredHint()
+        }
+        
+        @Html.ValidationMessage(controlId)
+    </div>
+}
+
+@{
+    if (hasAnyTooltips) 
+    { 
+        string elementsAsString = string.Join(", ", elementsWithoutTooltip);
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#newTicketForm').kendoTooltip({
+                    filter: '.inputs > [id^="ticket_attribute_"]:not("@(elementsAsString)")',
+                    content: function (e) {
+                        var target = e.target[0];
+                        return $(target).attr('data-title');
+                    },
+                    width: 300
+                });
+            });
+        </script>
+    }
+}

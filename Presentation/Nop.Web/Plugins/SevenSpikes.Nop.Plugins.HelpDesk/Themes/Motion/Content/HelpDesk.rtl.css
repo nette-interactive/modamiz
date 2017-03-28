@@ -1,0 +1,262 @@
+* {
+	direction: rtl;
+}
+.search-box input.search-box-text {
+	border-radius: !important 0;
+}
+.overview .submit-ticket:before {
+    left: auto;
+    right: 2px;
+}
+.overview .submit-ticket-button {
+    padding: 8px 32px 8px 10px;
+}
+
+ul#TicketModelTicketProductIds_taglist li.k-button,
+#TicketProducts_taglist li.k-button,
+ul#product-field_taglist li.k-button,
+#customer-field_taglist li.k-button {
+	margin: 0 0 5px 5px;
+	padding: 0 0 0 20px;
+	text-align: right;
+}
+ul#TicketModelTicketProductIds_taglist span.k-icon.k-delete,
+    #TicketProducts_taglist span.k-icon.k-delete,
+    ul#product-field_taglist span.k-icon.k-delete,
+    #customer-field_taglist span.k-icon.k-delete {
+	left: 2px;
+	right: auto;
+}
+.k-autocomplete .k-loading, .k-multiselect .k-loading {
+	left: 8px;
+	right: auto;
+}
+.k-widget.k-tooltip {
+	text-align: right;
+}
+label[for=TicketModel_Message] + table,
+label[for=SubmitReplyModel_ReplyMessage] + table,
+label[for=SubmitTicketNoteModel_NoteContent] + table,
+label[for=Content] + table {
+	float: right;
+}
+.k-webkit .k-editor-toolbar, 
+.k-ff .k-editor-toolbar, 
+.k-ie9 .k-editor-toolbar {
+	text-align: right;
+}
+span.k-dropdown-wrap.k-state-default .k-input {
+	padding: 10px 0 10px 20px;
+	text-align: right;
+}
+span.k-dropdown-wrap.k-state-default .k-input:after {
+	left: 0;
+	right: auto;
+}
+.inputs.upload .k-icon {
+	float: right;
+}
+.inputs.upload .k-filename {
+	float: right;
+	text-align: right;
+}
+.k-window-titlebar.k-header {
+	padding: 12px 12px 12px 36px;
+}
+.k-window-titlebar .k-window-actions {
+	left: 14px;
+	right: auto;
+}
+.ticket-buttons .k-button.ticket-info-button {
+	padding-right: 28px;
+	padding-left: 10px;
+}
+.ticket-buttons .k-button.delete-ticket-button {
+	padding-right: 24px;
+	padding-left: 10px;
+	background: #dcdcdc url(images/no_icon.png) no-repeat 94% center/* CHECK_HERE */;
+}
+button.ticket-info-button.k-button:before {
+	right: 6px;
+	left: auto;
+}
+.ticket-buttons .tb-right .k-button:before {
+	right: 0;
+	left: auto;
+}
+#ticket-details {
+	text-align: right;
+}
+#ticket-details .details-label {
+	margin-left: 5px;
+	margin-right: 0;
+}
+.ticket-comments .ticket-comment {
+	text-align: right;
+}
+.ticket-comments .comment-header .edit-comment {
+	padding-right: 24px;
+	padding-left: 0;
+	margin-right: 10px;
+	margin-left: 0;
+}
+.ticket-comments .comment-header .edit-comment:before {
+	right: 0;
+	left: auto;
+}
+.ticket-comments .attachment-content li {
+	background: url("images/attachments.png") no-repeat right center;
+	padding-right: 20px;
+	padding-left: 0;
+}
+.edit-ticket-page span.k-dropdown-wrap.k-state-default .k-input {
+	padding: 13px 7px 13px 20px;
+}
+.edit-ticket-page span.k-dropdown-wrap.k-state-default .k-input:after {
+	left: 6px;
+	right: auto;
+}
+.my-tickets-page .filter-label,
+.manage-tickets-page .filter-label {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.my-tickets-page input.k-formatted-value.filter-input.ticket-id.k-input,
+.manage-tickets-page input.k-formatted-value.filter-input.ticket-id.k-input,
+input#ticket-id {
+	padding-right: 5px;
+	padding-left: 0;
+}
+.k-numeric-wrap .k-select {
+	border-left: 1px solid #ddd;
+}
+.k-numerictextbox .k-select .k-link span.k-i-arrow-n {
+	background: url(images/arrow-numeric-up.png) no-repeat center 10px !important/* CHECK_HERE */;
+}
+.k-numerictextbox .k-select .k-link span.k-i-arrow-s {
+	background: url(images/arrow-numeric-down.png) no-repeat center 2px !important/* CHECK_HERE */;
+}
+.my-tickets-page span.k-dropdown-wrap.k-state-default .k-input,
+.manage-tickets-page span.k-dropdown-wrap.k-state-default .k-input {
+	padding: 12px 5px 12px 20px;
+}
+.my-tickets-page span.k-dropdown-wrap.k-state-default .k-input:after,
+    .manage-tickets-page span.k-dropdown-wrap.k-state-default .k-input:after {
+	left: 0;
+	right: auto;
+}
+.k-grid-header .k-header {
+	border-right: 0 !important;
+	border-left: 0;
+}
+.k-grid-header .k-header:first-child {
+	border-left: 0 !important;
+	border-right: 1px solid #ddd !important;
+}
+.k-grid .k-hierarchy-cell .k-icon.k-minus {
+	transform: rotate(90deg)/* CHECK_HERE */;
+	-webkit-transform: rotate(90deg)/* CHECK_HERE */;
+}
+.ticket-info-panel.tabstrip.k-widget.k-header.k-tabstrip {
+	text-align: right;
+}
+.ticket-info-panel .row-label {
+	margin: 0 0 0 5px;
+}
+span.k-icon.k-i-refresh {
+	background: url(images/icon-refresh.png) no-repeat 95% center !important/* CHECK_HERE */;
+	padding: 12px 24px 12px 12px;
+}
+.tickets-table-panel .ticketDueIn:after {
+	left: 0;
+	right: 0;
+}
+.tickets-table-panel .k-hierarchy-cell .k-icon {
+	left: 0;
+	right: 0;
+}
+.new-ticket-page .page-title {
+	background-position: center 10px/* CHECK_HERE */;
+}
+.new-ticket-page .page-title h1 {
+	right: 0;
+	left: 0;
+}
+.k-treeview .k-icon, 
+.k-scheduler-table .k-icon, 
+.k-grid .k-hierarchy-cell .k-icon {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.k-grid table td {
+    border-width: 1px 1px 1px 0 !important;
+}
+.k-grid table td:first-child {
+    border-left-width: 0 !important;
+} 
+.k-grid table td:last-child {
+    border-left-width: 1px !important;
+} 
+@media all and (max-width: 1366px) {
+}
+@media all and (min-width: 631px) {
+	.ticket-comments .comment-header .left {
+		float: right;
+	}
+	.ticket-comments .comment-header .right {
+		float: left;
+	}
+}
+@media all and (min-width: 769px) {
+	.my-tickets-page .filter-item,
+    .manage-tickets-page .filter-item {
+		float: right;
+		margin: 0 2% 2% 0;
+	}
+	.my-tickets-page .filter-item:nth-child(2n+1),
+    .manage-tickets-page .filter-item:nth-child(2n+1) {
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+@media all and (min-width: 769px) and (max-width: 1000px), (min-width: 1367px) {
+	#ticket-details .details-list {
+		margin: 0 2% 0 0;
+		float: right;
+	}
+}
+@media all and (min-width: 1001px) {
+	label[for=TicketModel_Message],
+    label[for=SubmitReplyModel_ReplyMessage],
+    label[for=SubmitTicketNoteModel_NoteContent],
+    label[for=Content] {
+		float: right;
+	}
+    .new-ticket-page .working-days-wrapper {
+        background-position: 96.2% center !important;
+    }
+    .new-ticket-page .working-days-wrapper .details {
+        text-align: right;
+        padding: 0 60px 2px 0;
+    }
+    .new-ticket-page .working-days-wrapper .details span {
+        float: right;
+        margin-left: 5px;
+    }
+    .new-ticket-page .working-days-wrapper {
+        background-position: 90% center;
+        padding: 15px;
+    }
+
+	.k-widget.k-editor {
+		float: right;
+	}
+}
+@media all and (min-width: 1367px) {
+	.ticket-buttons .tb-left {
+		float: right;
+	}
+	.ticket-buttons .tb-right {
+		float: left;
+	}
+}

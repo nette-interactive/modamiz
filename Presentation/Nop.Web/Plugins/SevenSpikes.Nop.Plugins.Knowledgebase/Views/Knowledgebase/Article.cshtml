@@ -1,0 +1,80 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models.Public
+@using Nop.Core.Infrastructure
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Domain
+
+@model ArticleModelCombinedWithSettingsModel
+
+@{
+    Layout = "_Knowledgebase.Layout.cshtml";
+
+    Html.AddTitleParts(!String.IsNullOrEmpty(Model.ArticleModel.SEOTitle) ? Model.ArticleModel.SEOTitle : Model.ArticleModel.Title);
+    Html.AddMetaDescriptionParts(Model.ArticleModel.SEODescription);
+    Html.AddMetaKeywordParts(Model.ArticleModel.SEOKeywords);
+
+    Html.AddScriptParts("~/Scripts/jquery.magnific-popup.js");
+    Html.AddCssFileParts("~/Content/magnific-popup/magnific-popup.css");
+}
+
+@Html.Action("Navigation", "Knowledgebase")
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.article-wrap img').each(function () {
+
+            var currentImage = this;
+            $(currentImage).magnificPopup(
+            {
+                items: [{
+                    src: $(currentImage).attr("src")
+                }],
+                type: 'image',
+                removalDelay: 300,
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    });
+</script>
+
+<div class="article-wrap">
+    <div class="article-panel">
+        @if (@Model.ArticleModel.IsAdmin)
+        {
+            <div class="admin-options">
+                <a class="k-button edit-article" href="@Url.Action("Edit", "ArticleAdmin", new{ area ="admin"})/@Model.ArticleModel.Id" title="@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Edit")">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Edit")</a>
+                <ul class="creation-info">
+                    <li class="creation-item">
+                        <label class="ci-label">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Author")</label>
+                        <span class="ci-value">@Model.ArticleModel.Author</span>
+                    </li>
+                    <li class="creation-item">
+                        <label class="ci-label">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.LastEditedBy")</label>
+                        <span class="ci-value">@Model.ArticleModel.LastEditAuthor</span>
+                    </li>
+                    <li class="creation-item">
+                        <label class="ci-label">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.CreatedOn")</label>
+                        <span class="ci-value">@Model.ArticleModel.Date</span>
+                    </li>
+                </ul>
+            </div>
+        }
+
+        <h1 class="article-name">@Model.ArticleModel.Title</h1>
+
+        <div class="article-content">@Html.Raw(@Model.ArticleModel.Content)</div>
+        
+        @if (Model.KnowledgebaseSettingsModel.EnableCategoryPage)
+        {
+            @Html.Partial(ViewNames.RelatedCategories, Model.ArticleModel)
+        }
+
+        @Html.Partial(ViewNames.Article_RelatedArticles, Model.ArticleModel.RelatedArticles)
+        
+        @if (Model.KnowledgebaseSettingsModel.EnableComments)
+        {
+            @Html.Partial(ViewNames.Article_Comments, Model.ArticleModel)
+        }
+    </div>
+</div>

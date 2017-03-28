@@ -1,0 +1,23 @@
+﻿@using SevenSpikes.Nop.Plugins.HelpDesk.Models;
+
+@model IList<TicketNoteModel>
+
+@if (Model.Count > 0)
+{
+    foreach (TicketNoteModel note in Model)
+    {
+        <div class="ticket-comment grey">
+            <div class="comment-header">
+                <span class="username-link left">@note.StaffName</span>
+                <span class="comment-date right">@note.CreatedOnUtc</span>
+            </div>
+            <div class="comment-body">
+                @Html.Raw(note.Content)
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="no-notes">@T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes.NoNotes")</div>
+}

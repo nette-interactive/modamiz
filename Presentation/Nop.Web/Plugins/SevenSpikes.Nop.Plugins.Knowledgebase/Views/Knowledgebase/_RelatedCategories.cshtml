@@ -1,0 +1,25 @@
+﻿@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models.Public
+
+@model ArticleModel
+
+<div class="related-categories">
+    <h3 class="rc-title">
+        <span class="title-text">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Categories")</span>
+    </h3>
+    @if (Model.Categories.Count > 0)
+    {
+        <ul class="rc-list">
+            @foreach (var category in @Model.Categories)
+            {
+                <li class="rc-item">
+                    <a class="rc-link" href="@Url.RouteUrl("HomePage")@category.SEName" title="@category.Name">@category.Name</a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="no-related-categories">@T("SevenSpikes.Knowledgebase.Public.Entities.Article.Uncategorised")</p>
+    }
+</div>

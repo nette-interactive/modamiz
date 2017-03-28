@@ -1,0 +1,47 @@
+﻿@using Nop.Web.Extensions
+@using SevenSpikes.Nop.Plugins.Knowledgebase.MVC
+@using SevenSpikes.Nop.Plugins.Knowledgebase.Models.Public
+
+@model KnowledgeabseSearchModel
+
+@{
+    Layout = "_Knowledgebase.Layout.cshtml";
+}
+
+@Html.Action("Navigation", "Knowledgebase", new { activeNodeId = 0 })
+
+<div class="page blog-search-results-page">
+    <div class="page-title">
+        <h1 class="section-title">@T("SevenSpikes.Knowledgebase.Public.Search.ResultsTitle", Request.QueryString["phrase"])</h1>
+    </div>
+    <div class="search-results-wrapper page-body">
+        @*<div class="page-title">
+            <h1 class="section-title">@T("SevenSpikes.Knowledgebase.Public.Search.ResultsTitle", Request.QueryString["phrase"])</h1>
+        </div>*@
+        @if (Model.Items.Count > 0)
+        {
+            <ul class="kb-search-results">
+                @foreach (var searchResult in Model.Items)
+                {
+                    <li class="kb-search-item">
+                        <a class="kb-search-link" href="@Url.RouteUrl("HomePage")@searchResult.SEName" title="@searchResult.Title">@Html.Raw(searchResult.HighlightedTitle)</a>
+                        <p>@Html.Raw(searchResult.HighlightedBody)</p>
+                    </li>
+                }
+            </ul>
+
+            var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber");
+
+            if (!pager.IsEmpty())
+            {
+                <div class="pager">
+                    @pager
+                </div>
+            }
+        }
+        else
+        {
+            <span class="no-results">@T("SevenSpikes.Knowledgebase.Public.Search.NoResults")</span>
+        }
+    </div>
+</div>

@@ -1,0 +1,27 @@
+D:\VSProjects\NPC\NopCommerce\Plugins\Nop.Plugin.Shipping.DHL\obj\Release\Nop.Plugin.Shipping.DHL.csprojResolveAssemblyReference.cache
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Description.txt
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\web.config
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\_CreateOrUpdate.cshtml
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\AddPopup.cshtml
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\EditPopup.cshtml
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\logo.jpg
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\Configure.cshtml
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Nop.Plugin.Shipping.DHL.dll.config
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Nop.Plugin.Shipping.DHL.dll
+D:\TFS Yeni\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Nop.Plugin.Shipping.DHL.pdb
+D:\TFS Yeni\NopCommerce\Plugins\Nop.Plugin.Shipping.DHL\obj\Release\Nop.Plugin.Shipping.DHL.csprojResolveAssemblyReference.cache
+D:\TFS Yeni\NopCommerce\Plugins\Nop.Plugin.Shipping.DHL\obj\Release\Nop.Plugin.Shipping.DHL.dll
+D:\TFS Yeni\NopCommerce\Plugins\Nop.Plugin.Shipping.DHL\obj\Release\Nop.Plugin.Shipping.DHL.pdb
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Description.txt
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\web.config
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\_CreateOrUpdate.cshtml
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\AddPopup.cshtml
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\EditPopup.cshtml
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\logo.jpg
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Views\Configure.cshtml
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Nop.Plugin.Shipping.DHL.dll.config
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Nop.Plugin.Shipping.DHL.dll
+D:\TFS\NopCommerce\Presentation\Nop.Web\Plugins\Shipping.DHL\Nop.Plugin.Shipping.DHL.pdb
+D:\TFS\NopCommerce\Plugins\Nop.Plugin.Shipping.DHL\obj\Release\Nop.Plugin.Shipping.DHL.csprojResolveAssemblyReference.cache
+D:\TFS\NopCommerce\Plugins\Nop.Plugin.Shipping.DHL\obj\Release\Nop.Plugin.Shipping.DHL.dll
+D:\TFS\NopCommerce\Plugins\Nop.Plugin.Shipping.DHL\obj\Release\Nop.Plugin.Shipping.DHL.pdb

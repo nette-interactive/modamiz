@@ -1,0 +1,808 @@
+﻿/*********** CSS RESET **********/
+
+* {
+	margin: 0;
+	outline: none;
+	padding: 0;
+	text-decoration: none;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+html {
+	margin: 0 !important;
+	-webkit-text-size-adjust: none;
+}
+ol, ul {
+	list-style: none;
+}
+a img {
+	border: none;
+}
+a:active {
+	outline: none;
+}
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+input[type="password"],
+textarea {
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: inset 0 0 0 1000px #fff;
+}
+script {
+    display: none !important;
+}
+
+
+
+/*********** GLOBAL STYLES **********/
+
+
+
+body {
+    color: #333;
+    max-width: 100%;
+	background: #fff;
+    font: normal 14px/normal Arial,sans-serif;
+    overflow-x: hidden; /* disables the horizontal scroll and fixes the bug of the responsive navigation and filters in mobile */
+}
+.knowledgebase-page img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.article-content ul,
+.related-categories ul,
+.related-articles ul,
+.category-articles ul,
+.child-categories ul {
+    margin: 12px 0;
+    list-style: disc;
+    padding-left: 24px;
+}
+.article-content ol,
+.related-categories ol,
+.related-articles ol,
+.category-articles ol,
+.child-categories ol {
+    margin: 12px 0;
+    list-style: decimal;
+    padding-left: 24px;
+}
+.article-content li,
+.related-categories li,
+.related-articles li,
+.category-articles li,
+.child-categories li {
+    margin: 0 0 5px;
+}
+
+/* SEARCH AUTOCOMPLETE */
+
+.knowledgebase-header-line {
+    padding: 10px 15px;
+    background: #333;
+    text-align: center;
+}
+.knowledgebase-title {
+    padding: 2px 10px 1px;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 0 10px;
+}
+.back-to-button {
+    color: #eee;
+}
+
+.knowledgebase-search span.search-input {
+    display: block;
+}
+.knowledgebase-search input.search-input {
+    border: 0;
+    background: #fff;
+    height: 36px;
+    padding-left: 10px;
+    padding-right: 46px;
+}
+.knowledgebase-search .k-autocomplete .k-loading {
+    position: absolute;
+    right: 40px;
+    bottom: 7px;
+    background: url('/Content/kendo/2014.1.318/Default/loading.gif') 50% 50% no-repeat;
+}
+.knowledgebase-search .search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    background: #999;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.instantSearch {
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.knowledgebase-search-item {
+    background: #fff;
+    text-align: left;
+    cursor: pointer;
+}
+.knowledgebase-autocomplete-last-item div {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+.knowledgebase-search-item .title {
+    padding: 10px;
+    color: #7c899b;
+}
+.k-state-hover .knowledgebase-search-item .title,
+.k-state-focused .knowledgebase-search-item .title {
+    background: #f5f5f5;
+    color: #000;
+}
+
+/* NAVIGATION */
+
+.knowledgebase-navigation-wrap {
+    border-right: 1px solid #ddd;
+}
+.knowledgebase-navigation .nav-treeview {
+    padding: 20px 0;
+    background: #f5f5f5;
+}
+#navigation-treeview li .k-image {
+    display: none;
+}
+.knowledgebase-navigation .k-item > div:hover {
+    cursor: pointer;
+}
+.knowledgebase-navigation a {
+    color: #333;
+}
+.knowledgebase-navigation .k-top,
+.knowledgebase-navigation .k-mid,
+.knowledgebase-navigation .k-bot {
+    padding: 5px 15px;
+}
+.knowledgebase-navigation .k-group .k-group .k-top,
+.knowledgebase-navigation .k-group .k-group .k-mid,
+.knowledgebase-navigation .k-group .k-group .k-bot {
+    padding-left: 35px;
+}
+.knowledgebase-navigation .k-group .k-group .k-group .k-top,
+.knowledgebase-navigation .k-group .k-group .k-group .k-mid,
+.knowledgebase-navigation .k-group .k-group .k-group .k-bot {
+    padding-left: 55px;
+}
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-top,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-mid,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-bot {
+    padding-left: 75px;
+}
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-top,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-mid,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-bot {
+    padding-left: 95px;
+}
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-group .k-top,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-group .k-mid,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-group .k-bot {
+    padding-left: 115px;
+}
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-group .k-group .k-top,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-group .k-group .k-mid,
+.knowledgebase-navigation .k-group .k-group .k-group .k-group .k-group .k-group .k-group .k-bot {
+    padding-left: 135px;
+}
+.knowledgebase-navigation .k-icon,
+#kb-search-form .k-autocomplete .k-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    height: 18px;
+    overflow: hidden;
+    font-size: 0;
+}
+.knowledgebase-navigation .k-icon {
+    margin-right: 4px;
+}
+.knowledgebase-navigation .k-icon.k-plus {
+    background: url(img/icon-folder.png) no-repeat left 2px;
+}
+.knowledgebase-navigation .k-icon.k-minus {
+    background: url(img/icon-open.png) no-repeat left 2px;
+}
+.knowledgebase-navigation .k-in {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.knowledgebase-navigation .k-icon + .k-in {
+    font-size: 16px !important;
+}
+.knowledgebase-navigation .k-in {
+    background: url(img/icon-article.png) no-repeat 2px 0;
+    padding-left: 23px;
+}
+    .knowledgebase-navigation .k-icon + .k-in {
+        background: none;
+        padding-left: 0;
+    }
+#navigation-treeview_tv_active > .k-top,
+#navigation-treeview_tv_active > .k-mid,
+#navigation-treeview_tv_active > .k-bot {
+    font-weight: bold;
+    background: #e5e5e5;
+}
+.activeTreeNode .k-in:before {
+    color: #373c41;
+}
+
+/* CATEGORY */
+
+.category-info {
+    padding: 30px 20px;
+}
+.category-info .category-title {
+    margin: 0 0 20px;
+}
+
+/* category articles */
+
+.category-articles {
+    margin: 0 0 30px;
+}
+.category-articles .title-link {
+    display: inline-block;
+    position: relative;
+    color: #333;
+    font-size: 16px;
+}
+.category-articles .title-link:before {
+    content: "";
+    width: 15px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 0;
+}
+.category-articles .title-link:hover,
+.category-articles .title-link:hover:before {
+    color: #000;
+}
+
+/* child categories */
+
+.child-categories .title {
+    margin: 0 0 20px;
+}
+.child-categories .title .title-text {
+    font-size: 20px;
+}
+.child-categories .child-category-wrap {
+    margin: 0 0 7px;
+}
+.child-categories .link-to-category {
+    display: inline-block;
+    color: #333;
+    font-size: 16px;
+}
+.child-categories .articles-list {
+    padding-left: 12px;
+}
+.child-categories .article-link {
+    color: #555;
+    font-size: 16px;
+}
+
+/* ARTICLE */
+
+.article-panel {
+    padding: 30px 20px 50px;
+}
+.article-name {
+    margin: 0 0 20px;
+}
+.admin-options {
+    margin: 0 0 45px;
+}
+.edit-article, .edit-category {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    background: #999;
+    padding: 8px 18px;
+    margin: 0 0 10px;
+}
+.creation-info .creation-item {
+    margin: 0 0 5px;
+}
+.creation-info .ci-label {
+    display: block;
+    font-weight: bold;
+}
+.creation-info .ci-value {
+    font-size: 15px;
+    color: #777;
+}
+
+/* SEARCH */
+
+.blog-search-results-page {
+    padding: 30px 20px 50px;
+}
+.page-title {
+    margin: 0 0 20px;
+    text-align: left;
+}
+.blog-search-results-page .search-results-wrapper {
+    padding: 0;
+}
+.kb-search-link .search-term-highlighter {
+    font-weight: bold;
+}
+.kb-search-item p .search-term-highlighter {
+    font-weight: bold;
+}
+.kb-search-item p {
+    padding-left: 23px;
+}
+.kb-search-item {
+    margin: 0 0 15px;
+    background: url(img/icon-article.png) no-repeat left 5px;
+}
+.kb-search-results {
+    margin-bottom: 50px;
+}
+.pager {
+    margin-left: 18px;
+    overflow: hidden;
+}
+.pager > ul > li {
+    float: left;
+    margin: 0 5px;
+    background: #eee;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+}
+.pager > ul > li > * {
+    display: block;
+    min-width: 34px;
+    padding: 5px;
+    color: #999;
+}
+.pager > ul > li.current-page {
+    font-weight: bold;
+}
+.pager > ul > li.next-page a {
+    padding: 5px 10px;
+}
+.pager > ul > li:hover a {
+    background-color: #e7e7e7;
+}
+
+
+@media all and (min-width: 430px) {
+
+    .creation-info .ci-label,
+    .creation-info .ci-value {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+}
+
+.article-content {
+    margin: 0 0 65px;
+}
+.article-content h2.title {
+    margin: 0 0 20px;
+}
+.article-content  h2.title .title-text {
+    font-size: 20px;
+}
+.article-content a {
+    color: #666;
+}
+.article-wrap p {
+    margin: 12px 0;
+}
+
+/* RELATED CATEGORIES */
+
+.related-categories {
+    margin: 0 0 35px;
+}
+.related-categories .rc-title {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.related-categories .rc-link {
+    display: inline-block;
+    color: #333;
+    font-size: 16px;
+}
+
+/* RELATED ARTICLES */
+
+.related-articles {
+    margin: 0 0 35px;
+}
+.related-articles .ra-title {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.related-articles .title-link {
+    display: inline-block;
+    position: relative;
+    color: #333;
+    font-size: 16px;
+}
+.related-articles .title-link:before {
+    content: "";
+    width: 15px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    left: 0;
+}
+.related-articles .title-link:hover,
+.related-articles .title-link:hover:before {
+    color: #000;
+}
+
+/* ARTICLE COMMENTS */
+
+.comments-section .cs-title {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.comments-section .no-comments {
+    margin: 0 0 35px;
+}
+.comments-section .ke-container {
+    margin: 0 0 20px;
+    max-width: 100%;
+}
+.comments-section .message-error,
+.comments-section .field-validation-error {
+    color: #c00;
+}
+.comments-section .captcha-box {
+    margin: 20px 0;
+}
+.comments-section .submit-comment {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+    background: #999;
+    padding: 10px 24px;
+    border: 0;
+    cursor: pointer;
+}
+.comments-section .article-comments {
+    margin: 0 0 40px;
+}
+.comments-section .article-comment {
+    border: 1px solid #eee;
+    margin: 0 0 20px;
+    max-width: 650px;
+}
+    .comments-section .article-comment form {
+        padding: 20px;
+        overflow: hidden;
+    }
+.comments-section .comment-header {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+.comments-section .comment-author,
+.comments-section .comment-creation-date {
+    float: left;
+    margin: 5px 10px;
+}
+.comments-section .info-label {
+    font-weight: bold;
+}
+.comments-section .comment-content {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+.comments-section .article-action-buttons {
+    padding: 10px;
+}
+.comments-section .edit-article-button {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    background: #999;
+    padding: 8px 18px;
+    border: 0;
+    cursor: pointer;
+}
+.comments-section .delete-article-button {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    background: #666;
+    padding: 8px 18px;
+    border: 0;
+    margin-left: 2px;
+}
+
+/* SEARCH RESULTS */
+
+.search-results-wrapper {
+    background: #fff;
+    padding: 30px 20px;
+}
+.search-results-wrapper .section-title {
+    margin: 0 0 30px;
+    border-bottom: 1px solid #d9e0ea;
+}
+.search-results-wrapper .section-title .title-text {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    padding: 8px 10px;
+}
+.search-results-wrapper .section-title .title-text:after {
+    content: " ";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #81ceee;
+}
+.search-results-wrapper .no-results {
+    font-size: 18px;
+}
+
+.search-results-wrapper .kb-search-link {
+    display: inline-block;
+    position: relative;
+    color: #333;
+    padding: 5px 5px 8px 23px;
+    font-size: 16px;
+}
+.search-results-wrapper .kb-search-link:before {
+    font-family: 'iconFont';
+    /*content: "\e600";*/
+    font-size: 17px;
+    width: 15px;
+    height: 17px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    color: #b0b8c4;
+}
+.search-results-wrapper .kb-search-link:hover {
+    color: #59b6db;
+}
+.search-results-wrapper .kb-search-link:hover:before {
+    color: #373c41;
+}
+
+/*** FOOTER ***/
+
+.footer {
+    background: #333;
+    overflow: hidden;
+}
+.copyright-info {
+    float: right;
+    color: #fff;
+    margin: 15px;
+}
+
+
+
+/*** MOBILE ONLY ***/
+
+@media all and (min-width: 621px) and (max-width: 980px) {
+
+    .knowledgebase-title {
+        float: left;
+    }
+    .back-to-button {
+        float: right;
+        padding: 17px 0;
+    }
+    .mobile-buttons {
+        display: inline-block;
+        margin: 0 !important;
+    }
+
+    .knowledgebase-navigation-wrap {
+        top: 50px !important;
+    }
+
+}
+
+@media all and (max-width: 980px) {
+
+    .knowledgebase-header-line {
+        padding: 0 20px !important;
+    }
+    .knowledgebase-title {
+        margin: 0;
+        padding: 14px 0 13px;
+    }
+    .mobile-buttons {
+        margin-top: 12px;
+    }
+    .mobile-button {
+        width: 50px;
+        height: 50px;
+        border: 0;
+        font-size: 0;
+        margin: 0 5px;
+        background: none;
+    }
+    .mobile-button.nav-button {
+        background: url(img/icon-menu.png) no-repeat center;
+    }
+    .mobile-button.search-panel-button {
+        background: url(img/icon-search.png) no-repeat center;
+    }
+
+    .knowledgebase-navigation-wrap {
+        position: absolute;
+        top: 128px;
+        left: 0;
+        bottom: 0;
+        background: #f3f5f9;
+        z-index: 1;
+        width: 320px;
+        display: none;
+        min-height: 980px;
+    }
+    .knowledgebase-navigation {
+        height: 100%;
+        overflow: auto;
+    }
+        .knowledgebase-navigation.opened {
+            display: block;
+        }
+    .knowledgebase-search {
+        display: none;
+        width: 100%;
+        padding: 12px 15px;
+        background: #333;
+        text-align: center;
+        z-index: 2;
+    }
+    .knowledgebase-search form {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 480px;
+    }
+
+}
+
+/*** DESKTOP ONLY ***/
+
+@media all and (min-width: 981px) {
+
+    .mobile-buttons {
+        display: none !important;
+    }
+
+    .knowledgebase-page {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .knowledgebase-header-line {
+        text-align: left;
+        padding: 12px 22px;
+    }
+    .knowledgebase-title {
+        margin: 0;
+        float: left;
+        padding: 7px 0 6px;
+        margin-right: 30px;
+        min-width: 268px;
+        text-align: left;
+    }
+    .back-to-button {
+        float: right;
+        margin: 10px 0;
+    }
+    .knowledgebase-search {
+        position: relative;
+        display: inline-block !important;
+        width: 450px;
+        vertical-align: middle;
+    }
+    .knowledgebase-navigation-wrap {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 46px;
+        background: #f5f5f5;
+        overflow: auto;
+        width: 320px;
+    }
+    .article-wrap,
+    .category-info-wrap {
+        position: absolute;
+        top: 0;
+        left: 320px;
+        right:0;
+        bottom: 46px;
+        background: #fff;
+        overflow: auto;
+    }
+
+/* SEARCH RESULTS */
+
+    .blog-search-results-page .page-title {
+        margin-left: 320px;
+    }
+    .search-results-wrapper {
+        margin-left: 320px;
+        min-height: 1080px;
+    }
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+}
+
+@media all and (min-width: 1200px) {
+
+    .knowledgebase-search {
+        width: 600px;
+    }
+
+}
+
+

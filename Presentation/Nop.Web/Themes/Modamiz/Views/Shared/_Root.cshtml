@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.Head.cshtml";
+}
+
+@Html.Widget("body_start_html_tag_after")
+@Html.Partial("_Notifications")
+@Html.Action("JavaScriptDisabledWarning", "Common")
+@Html.Partial("OldInternetExplorerWarning")
+
+
+<div class="master-wrapper-page kombiniyakala warp">
+
+    @Html.Action("AdminHeaderLinks", "Common")
+    @Html.Partial("Header")
+    <script type="text/javascript">
+        AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
+    </script>
+
+    <div class="header">
+        @*@Html.Action("TopMenu", "Catalog")*@
+        @Html.Widget("home_page_top")
+        @Html.Widget("top_navigation")
+        
+    </div>
+
+    <div class="banner-wrapper">
+        <div class="main-banner main-banner-1"> @Html.Widget("home_page_left_banner_top") </div>
+        <div style="display: none;" class="main-banner main-banner-2"> @Html.Widget("home_page_right_banner_top")</div>
+    </div>
+
+    <div class="master-wrapper-content">
+        @Html.Widget("content_before")
+
+        @if (IsSectionDefined("Breadcrumb"))
+        {
+            @RenderSection("Breadcrumb") 
+        }
+
+        <div class="wrap master-column-wrapper">
+            <a href="#" class="scrollToTop">Scroll To Top</a>
+
+            @RenderBody()
+        </div>
+        @Html.Widget("content_after")
+    </div>
+
+
+
+    @Html.Action("Footer", "Common")
+</div>
+@Html.Action("EuCookieLaw", "Common")
+@Html.Widget("body_end_html_tag_before")

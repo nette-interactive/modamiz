@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language Name="English">
+  <LocaleResource Name="SevenSpikes.Plugins.HelpDesk.Admin.Menu.MenuName">
+    <Value>Help Desk</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Block.Title">
+    <Value>Support</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTicketsLink">
+    <Value>Manage tickets</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.Ticket">
+    <Value>Ticket</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.Assign">
+    <Value>Assign</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.TicketInfo">
+    <Value>Ticket information</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.SearchBySubject">
+    <Value>Search by subject</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.SearchByProduct">
+    <Value>Search by product</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.SearchByCustomerProperty">
+    <Value>Search by customer property</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.SearchByCustomer">
+    <Value>Search by customer</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.DateFrom">
+    <Value>Date From</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.DateTo">
+    <Value>Date To</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTickets.ClearFilters">
+    <Value>Clear Filters</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ManageTicketsTitle">
+    <Value>Manage tickets</Value>
+  </LocaleResource>
+  <LocaleResource Name ="SevenSpikes.HelpDesk.Public.MyTicketsTitle">
+    <Value>My tickets</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.MyTicketsLink">
+    <Value>My tickets</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.EditMessageLink">
+    <Value>Edit Message</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.EditTicketLink">
+    <Value>Edit Ticket</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.EditTicket.Save">
+    <Value>Save</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.EditTicket.Edit">
+    <Value>Edit</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.EditTicket.Delete">
+    <Value>Delete</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.EditTicket.DeleteTicketConfirm">
+    <Value>Are you sure you want to delete this ticket?</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket">
+    <Value>View ticket</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.ReplyMessage">
+    <Value>Reply message</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.ReplyMessage.Required">
+    <Value>Reply message is required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Reply">
+    <Value>Reply</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.ReplyAndMarkAsResolved">
+    <Value>Reply and mark as resolved</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.MarkAsResolved">
+    <Value>Mark as resolved</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.MarkAsResolvedConfirm">
+    <Value>Are you sure you want to mark this ticket as resolved?</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes">
+    <Value>Notes ({0})</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes.NoteContent">
+    <Value>Note content</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes.NoteContent.Required">
+    <Value>Note content is required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ShowAddNote">
+    <Value>Add note</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes.AddNote">
+    <Value>Add</Value>
+  </LocaleResource>  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes.NoNotes">
+    <Value>There are no notes for this ticket.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ViewTicketNotes">
+    <Value>View Ticket Notes</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.Notes.ReturnToTheTicket">
+    <Value>Return to the ticket</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.ShowReplyForm">
+    <Value>Show reply form</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.HideReplyForm">
+    <Value>Hide reply form</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.ShowInfo">
+    <Value>Show ticket information</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.HideInfo">
+    <Value>Hide ticket information</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.RaisedOn">
+    <Value>Raised on</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.ViewTicket.By">
+    <Value>by</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.NewTicketLink">
+    <Value>New ticket</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.NewTicketLink.AdditionalInformation">
+    <Value>Additional Information</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.NewTicketLink.GeneralInformation">
+    <Value>General Information</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.NewTicketLink.MessageInformation">
+    <Value>Message Information</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.NewTicketLink.Fileattachments">
+    <Value>File attachments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.NewTicketLink.SubmitATicket">
+    <Value>Submit a ticket</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.TicketId">
+    <Value>Ticket Id</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.AssignedBy">
+    <Value>Assigned By</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.ClosedBy">
+    <Value>Closed By</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.ClosedBy.System">
+    <Value>System ( closed automatically )</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.ClosedOnUtc">
+    <Value>Closed On</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Owner">
+    <Value>Owner</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Owner.Unassigned">
+    <Value>Unassigned</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Staff">
+    <Value>Staff</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Department">
+    <Value>Department</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Department.Required">
+    <Value>Department is required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Product">
+    <Value>Product(s)</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Product.Required">
+    <Value>Product field is required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.TicketOwnerId">
+    <Value>Ticket Owner</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.ProductName">
+    <Value>Product</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Customer">
+    <Value>Customer</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.CustomerName">
+    <Value>First and Last Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.CustomerName.Required">
+    <Value>First and Last Name are required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.CCEmail">
+    <Value>CC (semicolon separated)</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.CCEmail.Invalid">
+    <Value>You have entered invalid email(s)</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Subject">
+    <Value>Subject</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Subject.Required">
+    <Value>Subject is required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Message">
+    <Value>Message</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Message.Required">
+    <Value>Message is required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Deadline">
+    <Value>Response deadline</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.Deadline.Hours">
+    <Value>working hours</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.LastAnswerUtc">
+    <Value>Last Answer</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.LastCustomerAnswerUtc">
+    <Value>Last Customer Answer</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.LastStaffAnswerUtc">
+    <Value>Last Staff Answer</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.TicketDueIn">
+    <Value>Due in</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.TicketDueIn.Overdue">
+    <Value>overdue</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.CreatedOnUtc">
+    <Value>Created On</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.TicketStatus">
+    <Value>Status</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Ticket.TicketOwner">
+    <Value>Owner</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Common.NoResultsFound">
+    <Value>No results found</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.KendoUIMultiSelect.SelectProductPlaceHolder">
+    <Value>Start typing product name...</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.KendoUIUpload.AttachFiles">
+    <Value>Attach Files</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.KendoUIUpload.MaxFilesAtATime">
+    <Value>Maximum 5 files can be uploaded at a time.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.KendoUIUpload.WrongExtension">
+    <Value>Executable files can not be uploaded.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.KendoUIUpload.MaxFileSizeWarning">
+    <Value>File size more than {0}MB can not be uploaded.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.KendoUIUpload.MaxSizeOfAttachedFilesWarning">
+    <Value>Files with a total size larger than {0}MB cannot be uploaded.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Message.CustomerName">
+    <Value>Customer Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Message.StaffName">
+    <Value>Staff Name</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute">
+    <Value>Ticket Attribute</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.InfoTab">
+    <Value>Attribute Info</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.ValuesTab">
+    <Value>Attribute Values</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.StoresTab">
+    <Value>Stores</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.SuccessfullyCreated">
+    <Value>Ticket Attribute successfully created.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.SuccessfullyDeleted">
+    <Value>Ticket Attribute successfully deleted.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.SuccessfullyEdited">
+    <Value>Ticket Attribute successfully edited.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.AddNew">
+    <Value>Add new ticket attribute</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.BackToList">
+    <Value>Back to list</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.EditAttributeDetails">
+    <Value>Edit ticket attribute details</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Name.Hint">
+    <Value>The name of the custom ticket attribute.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Tooltip">
+    <Value>Tooltip</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Tooltip.Hint">
+    <Value>Specify whether there will be a tooltip on the element ( when hovering )</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Name.Required">
+    <Value>Name is required.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.AttributeControlType">
+    <Value>Control type</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.AttributeControlType.Hint">
+    <Value>Choose how to display your attribute values.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.TextBoxPlaceholder">
+    <Value>TextBox Placeholder</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.TextBoxPlaceholder.Hint">
+    <Value>Choose if there will be a placeholder for the textbox input element.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.IsRequired">
+    <Value>Required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.IsRequired.Hint">
+    <Value>When an attribute is required, the customer must choose an appropriate attribute value before they can continue.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.IsAdminAttribute">
+    <Value>Admin attribute</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.IsAdminAttribute.Hint">
+    <Value>Specify whether this attribute is visible only to staff users.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.IsFilterable">
+    <Value>Filterable</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.IsFilterable.Hint">
+    <Value>Specify whether the staff users would be able to filter with this attribute.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.DisplayOrder">
+    <Value>Display order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.DisplayOrder.Hint">
+    <Value>The ticket attribute display order. 1 represents the first item in the list.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.GeneralSettings">
+    <Value>General Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Settings">
+    <Value>Ticket Attribute Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.AddNew">
+    <Value>Add new ticket attribute value</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.EditAttributeValueDetails">
+    <Value>Edit ticket attribute value details</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.Name.Hint">
+    <Value>The name of the custom ticket attribute value.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.Name.Required">
+    <Value>Name is required.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.IsPreSelected">
+    <Value>Pre-selected</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.IsPreSelected.Hint">
+    <Value>Determines whether this attribute value is pre selected for the ticket.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.DisplayOrder">
+    <Value>Display order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.DisplayOrder.Hint">
+    <Value>The display order of the attribute value. 1 represents the first item in attribute value list.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttribute.Values.SaveBeforeEdit">
+    <Value>You need to save the ticket attribute before you can add values for this ticket attribute page.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketAttributes.Stores.SaveBeforeEdit">
+    <Value>You need to save the ticket attribute before you can limit it to stores.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment">
+    <Value>Ticket Department</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.AddNew">
+    <Value>Add new ticket department</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Name">
+    <Value>Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Name.Hint">
+    <Value>The name of the department.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Name.Required">
+    <Value>Name is required.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.DisplayOrder">
+    <Value>Display Order</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.DisplayOrder.Hint">
+    <Value>The display order of the department. 1 represents the first item in the list.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.UseDefaultEmailAccount">
+    <Value>Use default email account ( from plugin settings )</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.EmailAccountId">
+    <Value>Email Account</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.EmailAccountId.Hint">
+    <Value>The email account from which the emails from this department will be send.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.SuccessfullyCreated">
+    <Value>Ticket Department successfully created.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.SuccessfullyDeleted">
+    <Value>Ticket Department successfully deleted.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.SuccessfullyEdited">
+    <Value>Ticket Department successfully edited.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.EditDepartmentDetails">
+    <Value>Edit ticket department details</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.BackToList">
+    <Value>Back To List</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.GeneralSettings">
+    <Value>General Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Settings">
+    <Value>Department Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Stores">
+    <Value>Stores</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Stores.SaveBeforeEdit">
+    <Value>You need to save the ticket department before you can limit it to stores.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Staff">
+    <Value>Staff</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Staff.SaveBeforeEdit">
+    <Value>You need to save the ticket department before you can add staff.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Staff.AddNew">
+    <Value>Add new</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Staff.StaffName">
+    <Value>Staff Name</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.TicketDepartment.Staff.StaffEmail">
+    <Value>Staff Email</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings">
+    <Value>Nop Help Desk Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.GeneralSettings">
+    <Value>General Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.EnableHelpDesk">
+    <Value>Enable Help Desk</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.EnableHelpDesk.Hint">
+    <Value>Enables/Disables the Help Desk</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.EnableCaptcha">
+    <Value>Enable Captcha</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.EnableCaptcha.Hint">
+    <Value>Enables/Disables the captcha on the new ticket page.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ResponseDeadline">
+    <Value>Response Deadline In Working Hours</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ResponseDeadline.Hint">
+    <Value>The response deadline in working hours.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ShowStaffSignature">
+    <Value>Show Staff Signature</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ShowStaffSignature.Hint">
+    <Value>Specify whether the signature will be shown at the bottom of the ticket message. ( It is only for staff )</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ShowDeadlineWorkingHoursAndWorkingDayOnNewTicketsPage">
+    <Value>Show working hours deadline, start and end working hour in UTC and working week days on New Ticket page</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ShowDeadlineWorkingHoursAndWorkingDayOnNewTicketsPage.Hint">
+    <Value>Specify whether the working hours deadline, start and end working hour in UTC and working week days will be shown at top of the New Ticket page.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WorkingWeekDays">
+    <Value>Working Days</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WorkingWeekDays.Hint">
+    <Value>Specify which days will be consider as working days ( This will be used when calculating the due in working hours ).</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WorkingStartHour">
+    <Value>Working Start Hour</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WorkingStartHour.Hint">
+    <Value>Specify which hour will be consider as a start working hour( This will be used when calculating the due in working hours ).</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WorkingEndHour">
+    <Value>Working End Hour</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WorkingEndHour.Hint">
+    <Value>Specify which hour will be consider as a end working hour( This will be used when calculating the due in working hours ).</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.PreviewAttachmentsInBrowser">
+    <Value>Preview Attachments In Browser</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.PreviewAttachmentsInBrowser.Hint">
+    <Value>Choose whether you want to preview the attachments in the browser or directly download them.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.DefaultSelectedStatus">
+    <Value>Default Selected Status</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.DefaultSelectedStatus.Hint">
+    <Value>Specify which will be the default selected status</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.CloseAutomaticallyAfterXDays">
+    <Value>Close Tickets Automatically After</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.CloseAutomaticallyAfterXDays.Hint">
+    <Value>Specify how many days after the last reply the tickets will be closed automatically.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WidgetZone">
+    <Value>Account Navigation Widget Zone</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.WidgetZone.Hint">
+    <Value>The widget zone where the help desk will appear in the account navigation menu.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.DefaultEmailAccount">
+    <Value>Default Email Account</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.DefaultEmailAccount.Hint">
+    <Value>The email account from which the emails are going to be sent.</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MinimumProductSearchKeywordLength">
+    <Value>Minimum Product Search Keyword Length</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MinimumProductSearchKeywordLength.Hint">
+    <Value>The minimum length of the searched keyword before the product multiselect autocomplete is triggered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfFileToAttach">
+    <Value>Maximum size of file to attach</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfFileToAttach.Hint">
+    <Value>The maximum size of file to attach when submitting a ticket. Note: If the value of this setting is larger than 4 you should increase the maxRequestLenght value in your WebConfig.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfFileToAttach.Warning">
+    <Value>Please enter a value that is greater than 0.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfFileToAttach.HigherThanMaximumRequestLength.Warning">
+    <Value>The Maximum Size Of File To Attach setting exceeds the maxRequestLength property in your Web.Config. This may cause errors when an user tries to upload a larger file. Please, follow the link below for more information about this issue and how to fix it: https://www.nop-templates.com/increasing-the-maxrequestlength </Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfTheAttachedFiles">
+    <Value>Maximum size of the attached files</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfTheAttachedFiles.Hint">
+    <Value>The maximum size of all the attached files when submitting a ticket. Note: If the value of this setting is larger than 4 you should increase the maxRequestLenght value in your WebConfig.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfTheAttachedFiles.Warning">
+    <Value>Please enter a value that is greater than 0.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaximumSizeOfTheAttachedFiles.HigherThanMaximumSizeOfTheAttachedFiles.Warning">
+    <Value>The Maximum size of file to attach setting value should not be greater than the Maximum size of the attached files setting value.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.IsProductFieldRequired">
+    <Value>Is Product Field Required</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.IsProductFieldRequired.Hint">
+    <Value>Specify if the product field is required.</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaxTicketProducts">
+    <Value>Max Ticket Products</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.MaxTicketProducts.Hint">
+    <Value>Specify how many products the user will be able to choose from the multi select control.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailOnSubmitTicket">
+    <Value>Send Email On Submit Ticket</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailOnSubmitTicket.Hint">
+    <Value>Specify whether an email will be send to the customer when a ticket is submitted.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailToStoreOwnerOnSubmitTicket">
+    <Value>Send Email To Store Owner On Submit Ticket</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailToStoreOwnerOnSubmitTicket.Hint">
+    <Value>Specify whether an email will be send to the store owner (ticket department) when a ticket is submitted</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailToTicketAssignee">
+    <Value>Send Email To Ticket Assignee (when a ticket is assigned)</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailToTicketAssignee.Hint">
+    <Value>Specify whether an email will be send to the ticket assignee when a ticket is assigned.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailOnReply">
+    <Value>Send Email On Reply</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailOnReply.Hint">
+    <Value>Specify whether an email will be send when a ticket is answered.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailOnClosingTicketAutomatically">
+    <Value>Send Email On Closing Ticket Automatically</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.SendEmailOnClosingTicketAutomatically.Hint">
+    <Value>Specify whether an email will be send when a ticket is closed automatically by the system(scheduled task).</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ProductPageWidgetZone">
+    <Value>Product page widget zone</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ProductPageWidgetZone.Hint">
+    <Value>The widget zone where the help desk button will appear on product details page. "None" means that the button won't be visible.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.ProductPageWidgetZone.None">
+    <Value>None</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.OrderPageWidgetZone">
+    <Value>Order page widget zone</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.OrderPageWidgetZone.Hint">
+    <Value>The widget zone where the help desk button will appear on order details page. "None" means that the button won't be visible.</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.OrderPageWidgetZone.None">
+    <Value>None</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Submenus.Settings">
+    <Value>Settings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Submenus.TicketDepartments">
+    <Value>Ticket Departments</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Submenus.TicketAttributes">
+    <Value>Ticket Attributes</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Settings.Error.WorkingDays">
+    <Value>You must enter at least one working day!</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Admin.Mappings">
+    <Value>Mappings</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.WorkingWeekDays">
+    <Value>Working Days</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.WorkingHours">
+    <Value>Working Hours</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.WorkingHoursStartEnd">
+    <Value>{0} to {1} UTC</Value>
+  </LocaleResource>
+  <LocaleResource Name="SevenSpikes.HelpDesk.Public.Deadline">
+    <Value>Response Deadline</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.TicketStatus.Open">
+    <Value>Open</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.TicketStatus.Closed">
+    <Value>Closed</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.TicketStatus.ClosedAutomatically">
+    <Value>Closed Automatically</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.TicketStatus.AwaitingCustomerReply">
+    <Value>Awaiting Customer Reply</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.AttributeControlType.DropdownList">
+    <Value>Dropdown List</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.AttributeControlType.TextBox">
+    <Value>Text Box</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.AttributeControlType.RadioList">
+    <Value>Radio List</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums.AttributeControlType.Checkboxes">
+    <Value>Checkboxes</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Enums.System.Dayofweek.Sunday">
+    <Value>Sunday</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.System.Dayofweek.Monday">
+    <Value>Monday</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.System.Dayofweek.Tuesday">
+    <Value>Tuesday</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.System.Dayofweek.Wednesday">
+    <Value>Wednesday</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.System.Dayofweek.Thursday">
+    <Value>Thursday</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.System.Dayofweek.Friday">
+    <Value>Friday</Value>
+  </LocaleResource>
+  <LocaleResource Name="Enums.System.Dayofweek.Saturday">
+    <Value>Saturday</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Admin.ContentManagement.Messagetemplates.Description.HelpDesk.Customer.NewTicketSubmittedNotification">
+    <Value>
+      This message template is used when a new ticket is submitted in the Help Desk ticketing system. The message is received by the customer who send the ticket. You can set up this option by ticking the checkbox &lt;strong&gt;Send Email On Submit Ticket&lt;/strong&gt; in Nop-Templates - Plugins - Help Desk - Settings.
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.ContentManagement.MessageTemplates.Description.HelpDesk.Customer.TicketClosedAutomaticallyNotification">
+    <Value>
+      This message template is used when a ticket has been closed automatically. The message is received by the customer who send the ticket. You can set up this option by ticking the checkbox &lt;strong&gt;Send Email On Closing Ticket Automatically&lt;/strong&gt; in Nop-Templates - Plugins - Help Desk - Settings.
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.ContentManagement.MessageTemplates.Description.HelpDesk.Customer.TicketReplyNotification">
+    <Value>
+      This message template is used when a ticket has been answered by the support team. The message is received by the customer who send the ticket. You can set up this option by ticking the checkbox &lt;strong&gt;Send Email On Reply&lt;/strong&gt; in Nop-Templates - Plugins - Help Desk - Settings.
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.ContentManagement.MessageTemplates.Description.HelpDesk.StoreOwner.NewTicketSubmittedNotification">
+    <Value>
+      This message template is used when a new ticket is submitted in the Help Desk ticketing system. The message is received by a store owner. You can set up this option by ticking the checkbox &lt;strong&gt;Send Email To Store Owner On Submit Ticket&lt;/strong&gt; in Nop-Templates - Plugins - Help Desk - Settings.
+    </Value>
+  </LocaleResource>
+  <LocaleResource Name="Admin.ContentManagement.MessageTemplates.Description.HelpDesk.StoreOwner.TicketAssignedNotification">
+    <Value>
+      This message template is used when a ticket has been assigned to a staff member. The message is received by the staff member. You can set up this option by ticking the checkbox &lt;strong&gt;Send Email To Ticket Assignee (when a ticket is assigned)&lt;/strong&gt; in Nop-Templates - Plugins - Help Desk - Settings.
+    </Value>
+  </LocaleResource>
+  
+</Language>

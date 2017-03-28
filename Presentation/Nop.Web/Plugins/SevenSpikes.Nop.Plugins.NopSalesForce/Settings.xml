@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <Setting Name="NopSalesForceSettings.EnableNopSalesForce">
+    <Value>false</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.UserName">
+    <Value>salesforce_username</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.Password">
+    <Value>salesforce_password</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.SecurityToken">
+    <Value>salesforce_security_token</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.SalesForceSoapServiceEndPoint">
+    <Value>https://login.salesforce.com/services/Soap/c/33.0</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.NumberOfCustomersToProcessInOneRun">
+    <Value>100</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.ProcessCustomersWithRegistrationOlderThanSpecifiedHours">
+    <Value>1</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.NumberOfProductsToProcessInOneRun">
+    <Value>100</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.NumberOfOrdersToProcessInOneRun">
+    <Value>100</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.NumberOfLicensesToProcessInOneRun">
+    <Value>100</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.ProcessOrdersOlderThanSpecifiedHours">
+    <Value>1</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.SalesForceTaskRunPeriodInHours">
+    <Value>10</Value>
+  </Setting>
+  <Setting Name="NopSalesForceSettings.MachineName">
+    <Value></Value>
+  </Setting>
+</Settings>

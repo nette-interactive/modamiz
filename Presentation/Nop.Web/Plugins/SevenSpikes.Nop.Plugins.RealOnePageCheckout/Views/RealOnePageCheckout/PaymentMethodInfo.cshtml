@@ -1,0 +1,11 @@
+﻿@using Nop.Web.Models.Checkout;
+
+@model CheckoutPaymentInfoModel
+
+@Html.Widget("op_checkout_payment_info_top")
+
+<div class="info">
+    @Html.Action(Model.PaymentInfoActionName, Model.PaymentInfoControllerName, Model.PaymentInfoRouteValues)
+</div>
+
+@Html.Widget("op_checkout_payment_info_bottom")

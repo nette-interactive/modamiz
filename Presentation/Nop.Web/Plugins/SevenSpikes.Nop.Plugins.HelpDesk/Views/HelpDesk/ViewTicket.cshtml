@@ -1,0 +1,275 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure;
+@using SevenSpikes.Nop.Plugins.HelpDesk.Models
+@using SevenSpikes.Nop.Plugins.HelpDesk.Domain.Enums;
+
+@model ViewTicketPublicModel
+
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts(T("SevenSpikes.HelpDesk.Public.ViewTicket").Text + "#" + Model.TicketModel.Id);
+
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.rtl.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.default.min.css");
+    Html.AddCssFileParts("~/Administration/Content/kendo/2014.1.318/kendo.common.min.css");
+    Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.css");
+
+    var supportRtl = EngineContext.Current.Resolve<IWorkContext>().WorkingLanguage.Rtl;
+    if (supportRtl)
+    {
+        Html.AddCssFileParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Themes/" + Model.Theme + "/Content/HelpDesk.rtl.css");
+    }
+
+    Html.AddScriptParts("~/Plugins/SevenSpikes.Nop.Plugins.HelpDesk/Scripts/HelpDesk.common.js");
+    Html.AddScriptParts(ResourceLocation.Foot, "~/Administration/Scripts/kendo/2014.1.318/kendo.web.min.js");
+}
+
+@section left
+{
+    @Html.Partial("CustomerNavigation", Model.NavigationModel)
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        @Html.Partial("_JSNavigation", "myTickets")
+
+
+        var defaultTools = kendo.ui.Editor.defaultTools;
+
+        defaultTools["insertLineBreak"].options.shift = false;
+        defaultTools["insertParagraph"].options.shift = true;
+
+        $("#@Html.FieldIdFor(model => model.SubmitReplyModel.ReplyMessage)").kendoEditor({
+            encoded: false
+        });
+
+        $("#@Html.FieldIdFor(model => model.SubmitReplyModel.ReplyMessage)").data("kendoEditor")
+           .toolbar
+           .element
+           .find("select.k-formatting").data("kendoSelectBox")
+              .one("open", function (e) {
+                  setTimeout(function () {
+                      e.sender.popup.wrapper.addClass("dropdown-wrapper paragraph-select");
+                  });
+              });
+
+        $(document).on("click", ".ticket-info-button", function (e) {
+            e.preventDefault();
+
+            if (!$('#ticket-details').hasClass("expanded")) {
+                $('#ticket-details').addClass("expanded").slideDown();
+                $('.ticket-info-button').text('@T("SevenSpikes.HelpDesk.Public.ViewTicket.HideInfo")');
+            } else {
+                $('#ticket-details').removeClass("expanded").slideUp();
+                $('.ticket-info-button').text('@T("SevenSpikes.HelpDesk.Public.ViewTicket.ShowInfo")');
+            }
+        });
+
+        $(document).on("click", ".show-reply-button", function (e) {
+            e.preventDefault();
+
+            if (!$('#submit-reply').hasClass("expanded")) {
+                $('#submit-reply').addClass("expanded").slideDown();
+                $('.show-reply-button').text('@T("SevenSpikes.HelpDesk.Public.ViewTicket.HideReplyForm")');
+            } else {
+                $('#submit-reply').removeClass("expanded").slideUp();
+                $('.show-reply-button').text('@T("SevenSpikes.HelpDesk.Public.ViewTicket.ShowReplyForm")');
+            }
+        });
+
+        $(document).on("click", "#ticket-mark-as-resolved, #reply-and-mark-as-resolved", function (e) {
+            var target = $(this);
+
+            if (target.attr('isValid') == null) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                createKendoConfirm('mark-as-resolved-confirmation', function() {
+                    target.attr('isValid', 'true');
+                    target.click();
+                }, function() {
+                    target.removeAttr('isValid');
+                });
+            } else {
+                window.location.href = target.attr('href');
+            }
+        });
+
+        $(document).on("click", "#delete-ticket", function (e) {
+            var target = $(this);
+
+            if (target.attr('isValid') == null) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                createKendoConfirm('delete-ticket-confirmation', function () {
+                    target.attr('isValid', 'true');
+                    target.click();
+                }, function () {
+                    target.removeAttr('isValid');
+                });
+            } else {
+                window.location.href = target.attr('href');
+            }
+        });
+
+        $('[type="submit"].reply-button, #reply-and-mark-as-resolved').on('click', function (e) {
+            var message = $('#SubmitReplyModel_ReplyMessage').val();
+            var fileUploaderValue = $('[name="SubmitReplyModel.MessageAttachments"].valid').val();
+            var filesUploaded = fileUploaderValue != undefined && fileUploaderValue !== '';
+            var target = $(this);
+
+            if (message.toLowerCase().indexOf('attach') !== -1 && !filesUploaded) {
+                if (target.attr('isValid') == null) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    createKendoConfirm('no-files-confirmation', function () {
+                        target.attr('isValid', 'true');
+                        target.click();
+                    }, function () {
+                        target.removeAttr('isValid');
+                    });
+                }
+            }
+        });
+
+        @if (ViewBag.OpenReplyForm != null && ViewBag.OpenReplyForm)
+        {
+            <text>
+                $('.show-reply-button').trigger('click');
+            </text>
+        }
+    });
+
+    // http://stackoverflow.com/questions/8466643/jquery-validate-enable-validation-for-hidden-fields/8565769#8565769
+    // enable the validation of the hidden fields( kendo fields )
+    $.validator.setDefaults({
+        ignore: [],
+    });
+</script>
+
+<div class="page account-page ticketing-page view-ticket-page">
+    <div class="page-title">
+        <h1 class="pt-text">@T("SevenSpikes.HelpDesk.Public.ViewTicket") #@Model.TicketModel.Id</h1>
+    </div>
+
+    <div class="page-body">
+        <div class="conversation">
+            <div class="ticket">
+                <div class="ticket-header">
+                    <div class="ticket-information">
+                        <h3 class="ticket-title">@Model.TicketModel.Subject</h3>
+                        <span class="ticket-date">
+                            @T("SevenSpikes.HelpDesk.Public.ViewTicket.RaisedOn") @Model.TicketModel.CreatedOnUtc
+                            @T("SevenSpikes.HelpDesk.Public.ViewTicket.By") @Model.TicketModel.CustomerName
+                        </span>
+                    </div>
+                    <div class="ticket-buttons">
+                        <div class="tb-left">
+                            <button class="ticket-info-button k-button">@T("SevenSpikes.HelpDesk.Public.ViewTicket.ShowInfo")</button>
+                        </div>
+                        <div class="tb-right">
+                            <button class="show-reply-button k-button">@T("SevenSpikes.HelpDesk.Public.ViewTicket.ShowReplyForm")</button>
+
+                            @if (Model.TicketModel.TicketStatus != TicketStatus.Closed && Model.TicketModel.TicketStatus != TicketStatus.ClosedAutomatically)
+                            {
+                                <a href="@Html.Raw(Url.Action("MarkTicketAsResolved", "HelpDesk", new {id = Model.TicketModel.Id}))" id="ticket-mark-as-resolved" class="mark-resolved-button k-button">
+                                    @T("SevenSpikes.HelpDesk.Public.ViewTicket.MarkAsResolved")
+                                </a>
+                            }
+
+                            @if (ViewBag.HasPermissions)
+                            {
+                                <a href="@Html.Raw(Url.Action("ManageTicketNotes", "HelpDesk", new {id = Model.TicketModel.Id}))" class="notes-button k-button">
+                                    @T("SevenSpikes.HelpDesk.Public.ViewTicket.Notes", Model.TicketModel.TicketNotes.Count)
+                                </a>
+
+                                <a href="@Html.Raw(Url.Action("EditTicket", "HelpDesk", new {id = Model.TicketModel.Id}))" class="edit-ticket-button k-button">
+                                    @T("SevenSpikes.HelpDesk.Public.EditTicket.Edit")
+                                </a>
+
+                                <a href="@Html.Raw(Url.Action("DeleteTicket", "HelpDesk", new {id = Model.TicketModel.Id}))" id="delete-ticket" class="delete-ticket-button k-button">
+                                    @T("SevenSpikes.HelpDesk.Public.EditTicket.Delete")
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ticket-details" class="ticket-details">
+                    @Html.Partial("_TicketDetails", Model)
+                </div>
+            </div>
+
+            <div id="submit-reply" class="reply-form">
+                @using (Html.BeginForm("SubmitReply", "HelpDesk", FormMethod.Post, new {id = "submit-reply-Form", enctype = "multipart/form-data"}))
+                {
+                    @Html.AntiForgeryToken()
+                    var messageErrorHtml = Html.ValidationSummary(true);
+
+                    if (!MvcHtmlString.IsNullOrEmpty(messageErrorHtml))
+                    {
+                        <div class="message-error">
+                            @messageErrorHtml
+                        </div>
+                    }
+
+                    @Html.Hidden("ticketId", Model.TicketModel.Id)
+                    @Html.Hidden("customerId", Model.TicketModel.CustomerId)
+
+                    <div class="fieldset">
+                        <div class="form-fields">
+                            <div class="inputs">
+                                @Html.LabelFor(model => model.SubmitReplyModel.CCEmail, new {}, ":")
+                                @Html.EditorFor(model => model.SubmitReplyModel.CCEmail)
+                                @Html.ValidationMessageFor(model => model.SubmitReplyModel.CCEmail)
+
+                            </div>
+                            <div class="inputs">
+                                @Html.LabelFor(model => model.SubmitReplyModel.ReplyMessage, new {}, ":")
+                                @Html.TextAreaFor(model => model.SubmitReplyModel.ReplyMessage, new {style = "height: 350px;"})
+                                @Html.RequiredHint()
+                                @Html.ValidationMessageFor(model => model.SubmitReplyModel.ReplyMessage)
+                            </div>
+                            <div class="inputs upload">
+                                @Html.EditorFor(model => model.SubmitReplyModel.MessageAttachments)
+                            </div>
+                            <div class="buttons">
+                                <button type="submit" name="reply" class="reply-button k-button">@T("SevenSpikes.HelpDesk.Public.ViewTicket.Reply")</button>
+                                <button type="submit" name="reply-and-mark-as-resolved" id="reply-and-mark-as-resolved" class="reply-and-mark-button k-button" value="@T("SevenSpikes.HelpDesk.Public.ViewTicket.ReplyAndMarkAsResolved")">@T("SevenSpikes.HelpDesk.Public.ViewTicket.ReplyAndMarkAsResolved")</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="ticket-comments">
+                @Html.Partial("_TicketMessages", Model.TicketModel.TicketMessages)
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="mark-as-resolved-confirmation">
+    <p class="message">@T("SevenSpikes.HelpDesk.Public.ViewTicket.MarkAsResolvedConfirm")</p>
+
+    <button class="confirm">Yes</button>
+    <button class="cancel">No</button>
+</script>
+
+<script type="text/x-kendo-template" id="delete-ticket-confirmation">
+    <p class="message">@T("SevenSpikes.HelpDesk.Public.EditTicket.DeleteTicketConfirm")</p>
+
+    <button class="confirm">Yes</button>
+    <button class="cancel">No</button>
+</script>
+
+<script type="text/x-kendo-template" id="no-files-confirmation">
+    <p class="message">You mentioned "attach", but have not uploaded any files. Submit anyway?</p>
+
+    <button class="confirm">Yes</button>
+    <button class="cancel">No</button>
+</script>
